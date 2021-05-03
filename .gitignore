@@ -1,0 +1,14 @@
+*
+!.gitignore
+!/design-utility
+
+!/wp-content
+/wp-content/*
+!/wp-content/themes
+/wp-content/themes/*
+!/wp-content/themes/portfolio
+/wp-content/themes/portfolio/public/*
+
+!README.md
+!package.json
+!webpack.mix.js
