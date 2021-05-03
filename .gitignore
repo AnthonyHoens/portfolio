@@ -1,4 +1,5 @@
-*
+/*
+
 !.gitignore
 !/design-utility
 
@@ -10,5 +11,3 @@
 /wp-content/themes/portfolio/public/*
 
 !README.md
-!package.json
-!webpack.mix.js
