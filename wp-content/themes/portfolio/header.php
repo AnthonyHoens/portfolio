@@ -8,6 +8,7 @@
         <title>Anthony Hoens | Portfolio du jeune étudiant passionné par le web!</title>
 
         <link rel="stylesheet" href="<?= dw_asset('/css/reset.css') ?>">
+        <link rel="stylesheet" href="<?= dw_asset('/css/theme.css') ?>">
 
         <?php wp_head() ?>
     </head>
@@ -18,14 +19,19 @@
             Anthony Hoens
         </h1>
         <nav role="navigation">
-            <h2 aria-level="2" role="heading">
+            <h2 class="sro" aria-level="2" role="heading">
                 Navigation principale
             </h2>
             <ul>
-                <li><a href="">Accueil</a></li>
-                <li><a href="">Projet</a></li>
-                <li><a href="">Á propos</a></li>
-                <li><a href="">Contact</a></li>
+                <?php foreach (dw_menu('main') as $link): ?>
+                    <li>
+                        <a href="<?= $link->url ?>">
+                            <span></span>
+                            <?= $link->label ?>
+                        </a>
+                    </li>
+                <?php endforeach; ?>
+
             </ul>
         </nav>
     </header>

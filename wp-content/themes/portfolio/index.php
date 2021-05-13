@@ -36,7 +36,7 @@
         </div>
     </section>
 
-    <section class="projects">
+    <section class="projects" id="projects">
         <h2 class="projects__title sro" aria-level="2" role="heading">
             Tous mes projets
         </h2>

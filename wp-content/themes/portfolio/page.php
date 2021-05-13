@@ -11,10 +11,7 @@
                     <?php the_content(); ?>
                 </p>
             </div>
-            
         </section>
-
-
     </main>
 
 <?php get_footer(); ?>

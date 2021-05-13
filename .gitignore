@@ -1,7 +1,10 @@
 /*
 
 !.gitignore
+!package.json
 !/design-utility
+
+
 
 !/wp-content
 /wp-content/*

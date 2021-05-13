@@ -1,3 +1,5 @@
+<?php /* Template Name: Page A propos */ ?>
+
 <?php get_header(); ?>
 
 <main class="contact">

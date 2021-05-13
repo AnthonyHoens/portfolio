@@ -4,26 +4,14 @@
                     Navigation principale
                 </h2>
                 <ul class="nav__container">
-                    <li class="nav__item">
-                        <a href="" class="nav__text">
-                            Accueil
-                        </a>
-                    </li>
-                    <li class="nav__item">
-                        <a href="" class="nav__text">
-                            Projet
-                        </a>
-                    </li>
-                    <li class="nav__item">
-                        <a href="" class="nav__text">
-                            Á propos
-                        </a>
-                    </li>
-                    <li class="nav__item">
-                        <a href="" class="nav__text">
-                            Contact
-                        </a>
-                    </li>
+                    <?php foreach (dw_menu('main') as $link): ?>
+                        <li class="nav__item">
+                            <a href="<?= $link->url ?>" class="nav__text">
+
+                                <?= $link->label ?>
+                            </a>
+                        </li>
+                    <?php endforeach; ?>
                 </ul>
             </nav>
 
