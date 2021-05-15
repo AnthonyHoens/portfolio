@@ -15,7 +15,7 @@
 
     <header class="header">
         <h1 aria-level="1" role="heading" class="header__title">
-            Anthony Hoens
+            <a href="/">Anthony Hoens</a>
         </h1>
         <nav role="navigation" class="header__nav nav">
             <h2 class="sro nav__title" aria-level="2" role="heading">
@@ -24,8 +24,8 @@
             <ul class="nav__ul ul">
                 <?php foreach (dw_menu('main') as $link): ?>
                     <li class="nav__li">
-                        <a class="nav__text" href="<?= $link->url ?>">
-                            <span class="nav__line"></span>
+                        <a class="nav__text text" href="<?= $link->url ?>">
+                            <span class="text__line"></span>
                             <?= $link->label ?>
                         </a>
                     </li>

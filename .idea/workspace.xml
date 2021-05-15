@@ -3,14 +3,12 @@
   <component name="ChangeListManager">
     <list default="true" id="3b1d877c-cc90-45dd-b7ce-f1b063c63ffb" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wp-content/themes/portfolio/about.php" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/portfolio/about.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/wp-content/themes/portfolio/footer.php" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/portfolio/footer.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/wp-content/themes/portfolio/header.php" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/portfolio/header.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/wp-content/themes/portfolio/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/portfolio/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wp-content/themes/portfolio/resources/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/portfolio/resources/js/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wp-content/themes/portfolio/resources/sass/parts/_header.scss" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/portfolio/resources/sass/parts/_header.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wp-content/themes/portfolio/resources/sass/parts/_home-page.scss" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/portfolio/resources/sass/parts/_home-page.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/wp-content/themes/portfolio/resources/sass/theme.scss" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/portfolio/resources/sass/theme.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wp-content/themes/portfolio/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/portfolio/style.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -68,7 +66,7 @@
       <workItem from="1613999337975" duration="60000" />
       <workItem from="1620916226345" duration="14724000" />
       <workItem from="1620993740303" duration="5257000" />
-      <workItem from="1621078811461" duration="42000" />
+      <workItem from="1621078811461" duration="12381000" />
     </task>
     <servers />
   </component>

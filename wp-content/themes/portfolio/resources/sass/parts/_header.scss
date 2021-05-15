@@ -4,6 +4,7 @@
 
 .header {
   position: absolute;
+  z-index: 9999;
   top: 0;
   left: 0;
   right: 0;
@@ -22,6 +23,10 @@
     text-align: center;
     line-height: 24px;
   }
+  &__title a {
+    color: white;
+    text-decoration: none;
+  }
 
   &__nav {
     display: block;
@@ -39,10 +44,36 @@
         margin-bottom: 0.5rem;
       }
 
+      &__li:nth-child(odd) span {
+        left: 0;
+      }
+
+      &__li:nth-child(even) span {
+        right: 0;
+      }
+
       &__text {
+        position: relative;
         font-size: 1rem;
         text-decoration: none;
         color: white;
+
+        .text {
+
+          &__line {
+            height: 2px;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 0%;
+            background-color: white;
+            transition: width .3s ease-out;
+          }
+        }
+      }
+
+      &__text:hover .text__line, &__text:focus .text__line {
+        width: 100%;
       }
     }
   }

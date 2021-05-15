@@ -9,7 +9,8 @@
         <p class="landing_page__text">
             Front End / Back end Dev
         </p>
-        <a href="mailto:anthony-hoens@hotmail.com" class="landing_page__link">
+        <a href="mailto:anthony-hoens@hotmail.com" class="landing_page__link link">
+            <span class="link__bg"></span>
             Contactez-moi
         </a>
     </section>

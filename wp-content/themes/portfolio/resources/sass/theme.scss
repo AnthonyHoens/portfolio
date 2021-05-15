@@ -2,11 +2,18 @@
 @import "reset";
 @import "parts/header";
 @import "parts/home-page";
+@import "parts/footer";
 
 
 html {
   font-size: 16px;
   font-family: "Reem Kufi", sans-serif;
+  scroll-behavior: smooth;
+}
+
+p {
+  font-size: 1rem;
+  line-height: 25px;
 }
 
 .sro {

@@ -1,13 +1,12 @@
         <footer class="footer">
             <nav role="navigation" class="footer__nav nav">
                 <h2 class="nav__title sro" aria-level="2" role="heading">
-                    Navigation principale
+                    Seconde navigation principale
                 </h2>
                 <ul class="nav__container">
                     <?php foreach (dw_menu('main') as $link): ?>
                         <li class="nav__item">
                             <a href="<?= $link->url ?>" class="nav__text">
-
                                 <?= $link->label ?>
                             </a>
                         </li>

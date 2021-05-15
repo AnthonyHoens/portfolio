@@ -1,15 +1,116 @@
 .main {
 
-
   &__landing_page {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    color: white;
 
     .landing_page {
-
       &__canvas {
+        position: absolute;
         width: 100%;
-        height: 100vh;
+        height: 100%;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        left: 0;
         background-color: #272727;
+        z-index: -10;
+      }
+
+      &__title {
+        font-size: 3.998rem;
+        text-transform: uppercase;
+        margin-bottom: 1rem;
+        color: white;
+      }
+
+      &__text {
+        font-size: 1.414rem;
+        color: white;
+        margin-bottom: 2rem;
+      }
+
+      &__link {
+        position: relative;
+        width: 16.75rem;
+        text-align: center;
+        padding: 1.25rem 0;
+        text-decoration: none;
+        color: white;
+        border-radius: 10px;
+        border: 1px solid white;
+
+        &:hover .link__bg, &:focus .link__bg {
+          width: 100%;
+          box-shadow: 0 0 10px #1B8284;
+        }
+
+        .link {
+
+          &__bg {
+            transition: width 0.5s ease-in, box-shadow 0.1s 0.4s linear;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            width: 0%;
+            box-shadow: none;
+            background: #1B8284;
+            z-index: -3;
+            border-radius: 10px;
+          }
+
+
+          }
+        }
+      }
+    }
+
+
+    &__about {
+      display: grid;
+      grid-template-columns: repeat(12, 1fr);
+      grid-template-rows: 1fr;
+      grid-column-gap: 24px;
+      grid-row-gap: 0px;
+      padding: 12.375rem 6rem;
+
+      background: linear-gradient(90deg, rgba(27,130,132,0.1) 0%, rgba(27,130,132,0.1) 1%, rgba(255,255,255,0.1) 2%, rgba(255,255,255,0.1) 23%, rgba(27,130,132,0.1) 24%, rgba(27,130,132,0.1) 25%, rgba(255,255,255,0.1) 26%);
+      background-size: calc((100% - (24px * 12)) / 12);
+      background-position: 72px 0;
+
+      .about {
+
+        &__title {
+          grid-column: 2 / 3;
+          text-transform: uppercase;
+        }
+
+        &__text_1 {
+          grid-column: 5 / 8;
+          margin-bottom: 10rem;
+        }
+
+        &__text_2 {
+          grid-column: 3 / 7;
+          margin-bottom: 10rem;
+        }
+
+        &__text_3 {
+          grid-column: 4 / 8;
+        }
+
+        &__img_container {
+          grid-column: 9 / 12;
+          vertical-align: top;
+        }
       }
     }
   }
-}
+
