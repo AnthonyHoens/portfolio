@@ -1,7 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="3b1d877c-cc90-45dd-b7ce-f1b063c63ffb" name="Default Changelist" comment="" />
+    <list default="true" id="3b1d877c-cc90-45dd-b7ce-f1b063c63ffb" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wp-content/themes/portfolio/about.php" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/portfolio/about.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wp-content/themes/portfolio/footer.php" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/portfolio/footer.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wp-content/themes/portfolio/header.php" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/portfolio/header.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wp-content/themes/portfolio/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/portfolio/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wp-content/themes/portfolio/resources/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/portfolio/resources/js/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wp-content/themes/portfolio/resources/sass/theme.scss" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/portfolio/resources/sass/theme.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wp-content/themes/portfolio/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/portfolio/style.css" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -9,6 +19,14 @@
   </component>
   <component name="ComposerSettings">
     <execution />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaScript File" />
+        <option value="SCSS File" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -22,8 +40,15 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../test" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="list.type.of.created.stylesheet" value="SCSS" />
+    <property name="nodejs_package_manager_path" value="npm" />
     <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\GitTower\Github\portfolio\wp-content\themes\portfolio\resources\sass\parts" />
+    </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -41,6 +66,9 @@
       <workItem from="1613133724030" duration="13000" />
       <workItem from="1613732907766" duration="75000" />
       <workItem from="1613999337975" duration="60000" />
+      <workItem from="1620916226345" duration="14724000" />
+      <workItem from="1620993740303" duration="5257000" />
+      <workItem from="1621078811461" duration="42000" />
     </task>
     <servers />
   </component>

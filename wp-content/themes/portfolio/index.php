@@ -1,7 +1,8 @@
 <?php get_header(); ?>
 
 <main class="main">
-    <section class="landing_page">
+    <section class="main__landing_page landing_page">
+        <canvas class="landing_page__canvas" id="animation"></canvas>
         <h1 class="landing_page__title" aria-level="1" role="heading">
             Hoens Anthony<span class="sro">, jeune étudiant de 23 ans vous accompagnant vers de nouvelles aventures&nbsp;!</span>
         </h1>
@@ -13,7 +14,7 @@
         </a>
     </section>
 
-    <section class="about">
+    <section class="main__about about">
         <h2 class="about__title" aria-level="2" role="heading">
             Á propos
         </h2>
@@ -36,7 +37,7 @@
         </div>
     </section>
 
-    <section class="projects" id="projects">
+    <section class="main__projects projects" id="projects">
         <h2 class="projects__title sro" aria-level="2" role="heading">
             Tous mes projets
         </h2>
@@ -53,7 +54,7 @@
 
         <?php if ($projects->have_posts()) : while($projects->have_posts()) : $projects->the_post(); ?>
 
-        <section class="project">
+        <section class="projects__project project">
             <div class="project__info_container">
                 <p class="project__number">
                     <?php the_field('number'); ?>
@@ -76,7 +77,7 @@
         </section>
         <?php endwhile; else: ?>
             <div>
-                <p class="no_project">
+                <p class="project__no_project">
                     Nous n'avons pas encore trouvé de projet.
                 </p>
             </div>

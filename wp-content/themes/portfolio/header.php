@@ -7,26 +7,25 @@
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <title>Anthony Hoens | Portfolio du jeune étudiant passionné par le web!</title>
 
-        <link rel="stylesheet" href="<?= dw_asset('/css/reset.css') ?>">
-        <link rel="stylesheet" href="<?= dw_asset('/css/theme.css') ?>">
+        <link rel="stylesheet" href="<?= dw_asset('/css/theme.css'); ?>">
 
-        <?php wp_head() ?>
+        <?php wp_head(); ?>
     </head>
     <body>
 
-    <header>
-        <h1 aria-level="1" role="heading">
+    <header class="header">
+        <h1 aria-level="1" role="heading" class="header__title">
             Anthony Hoens
         </h1>
-        <nav role="navigation">
-            <h2 class="sro" aria-level="2" role="heading">
+        <nav role="navigation" class="header__nav nav">
+            <h2 class="sro nav__title" aria-level="2" role="heading">
                 Navigation principale
             </h2>
-            <ul>
+            <ul class="nav__ul ul">
                 <?php foreach (dw_menu('main') as $link): ?>
-                    <li>
-                        <a href="<?= $link->url ?>">
-                            <span></span>
+                    <li class="nav__li">
+                        <a class="nav__text" href="<?= $link->url ?>">
+                            <span class="nav__line"></span>
                             <?= $link->label ?>
                         </a>
                     </li>

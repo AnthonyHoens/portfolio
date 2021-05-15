@@ -2,13 +2,13 @@
 
 <?php get_header(); ?>
 
-<main class="contact">
-    <section class="contact__container">
+<main class="main">
+    <section class="main__contact contact">
         <h2 role="heading" aria-level="2" class="contact__title sro">
             <?php the_title(); ?>
         </h2>
 
-        <div class="second_container">
+        <div class="contact__second_container second_container">
             <p class="second_container__title">
                 <?php the_content(); ?>
             </p>
@@ -58,13 +58,13 @@
         ]);
 
     ?>
-    <section class="some_projects">
+    <section class="main__some_projects some_projects">
         <h2 aria-level="2" role="heading" class="some_projects__title">
             Quelque uns de mes projets
         </h2>
         <?php if ($projects->have_posts()) : while($projects->have_posts()) : $projects->the_post(); ?>
 
-            <section class="project">
+            <section class="some_projects__project project">
                 <div class="project__info_container">
                     <p class="project__number">
                         <?php the_field('number'); ?>
@@ -79,7 +79,7 @@
             </section>
         <?php endwhile; else: ?>
             <div>
-                <p class="no_project">
+                <p class="project__no_project">
                     Nous n'avons pas encore trouvé de projet.
                 </p>
             </div>

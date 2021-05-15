@@ -1,0 +1,49 @@
+/***        ***/
+/*** HEADER ***/
+/***        ***/
+
+.header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  font-family: "Reem Kufi", sans-serif;
+  color: white;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem 3rem;
+
+  &__title {
+    width: 7.625rem;
+    font-size: 1rem;
+    text-transform: uppercase;
+    text-align: center;
+    line-height: 24px;
+  }
+
+  &__nav {
+    display: block;
+
+    .nav {
+
+      &__ul {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-end;
+      }
+
+      &__li:not(:last-of-type) {
+        margin-bottom: 0.5rem;
+      }
+
+      &__text {
+        font-size: 1rem;
+        text-decoration: none;
+        color: white;
+      }
+    }
+  }
+}

@@ -1,6 +1,6 @@
         <footer class="footer">
-            <nav role="navigation" class="nav">
-                <h2 class="footer__title sro" aria-level="2" role="heading">
+            <nav role="navigation" class="footer__nav nav">
+                <h2 class="nav__title sro" aria-level="2" role="heading">
                     Navigation principale
                 </h2>
                 <ul class="nav__container">
@@ -24,6 +24,7 @@
             </div>
         </footer>
 
+        <script src="<?= dw_asset('js/app.js') ?>"></script>
         <?php wp_footer(); ?>
     </body>
 </html>
