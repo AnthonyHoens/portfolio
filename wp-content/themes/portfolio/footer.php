@@ -6,7 +6,7 @@
                 <ul class="nav__container">
                     <?php foreach (dw_menu('main') as $link): ?>
                         <li class="nav__item">
-                            <a href="<?= $link->url ?>" class="nav__text">
+                            <a href="<?= $link->url ?>" class="nav__text <?= $link->classes ?>">
                                 <?= $link->label ?>
                             </a>
                         </li>
@@ -23,7 +23,12 @@
             </div>
         </footer>
 
-        <script src="<?= dw_asset('js/app.js') ?>"></script>
+        <script src="<?= dw_asset('js/contact.js') ?>"></script>
+
+        <?php if (is_front_page()): ?>
+            <script src="<?= dw_asset('js/app.js') ?>"></script>
+        <?php endif; ?>
+
         <?php wp_footer(); ?>
     </body>
 </html>

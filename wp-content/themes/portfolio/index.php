@@ -16,6 +16,18 @@
     </section>
 
     <section class="main__about about">
+        <span class="about__grid about__grid_1"></span>
+        <span class="about__grid about__grid_2"></span>
+        <span class="about__grid about__grid_3"></span>
+        <span class="about__grid about__grid_4"></span>
+        <span class="about__grid about__grid_5"></span>
+        <span class="about__grid about__grid_6"></span>
+        <span class="about__grid about__grid_7"></span>
+        <span class="about__grid about__grid_8"></span>
+        <span class="about__grid about__grid_9"></span>
+        <span class="about__grid about__grid_10"></span>
+        <span class="about__grid about__grid_11"></span>
+        <span class="about__grid about__grid_12"></span>
         <h2 class="about__title" aria-level="2" role="heading">
             Á propos
         </h2>
@@ -33,8 +45,12 @@
 
 
         <div class="about__img_container">
-            <img class="about__img" src="" alt="Photo de Hoens Anthony">
-            <a href="" class="about__img_text">En savoir plus<span class="sro"> à propos de anthony hoens</span></a>
+            <span class="about__span about__span_1"></span>
+            <span class="about__span about__span_2"></span>
+            <span class="about__span about__span_3"></span>
+            <span class="about__span about__span_4"></span>
+            <img class="about__img" src="http://portfolio.local/wp-content/uploads/2021/05/hoens_anthony.png" alt="Photo de Hoens Anthony">
+            <a href="http://portfolio.local/about/" class="about__img_text">En savoir plus<span class="sro"> à propos de anthony hoens</span></a>
         </div>
     </section>
 
@@ -56,24 +72,37 @@
         <?php if ($projects->have_posts()) : while($projects->have_posts()) : $projects->the_post(); ?>
 
         <section class="projects__project project">
-            <div class="project__info_container">
-                <p class="project__number">
-                    <?php the_field('number'); ?>
-                </p>
-                <h3 class="project__title" aria-level="3" role="heading">
-                    <?php the_title(); ?>
-                </h3>
-                <p class="project__description">
-                    <?php the_field('description'); ?>
-                </p>
+            <span class="project__span project__span_1"></span>
+            <span class="project__span project__span_2"></span>
+            <span class="project__span project__span_3"></span>
+            <span class="project__span project__span_4"></span>
+            <div class="project__container">
+                <div class="project__info_container">
+                    <p class="project__number">
+                        <?php the_field('number'); ?>
+                    </p>
+                    <h3 class="project__title" aria-level="3" role="heading">
+                        <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
+                    </h3>
+                    <p class="project__description">
+                        <?php the_field('description'); ?>
+                    </p>
 
-                <div class="project__link_container">
-                    <a href="<?php the_permalink(); ?>" class="project__container">Voir le projet</a>
-                    <a href="<?php the_field('link'); ?>" target="_blank" class="project__container">Lien vers le site</a>
+                    <div class="project__link_container">
+                        <a href="<?php the_permalink(); ?>" class="project__link">
+                            <span></span>
+                            Voir le projet
+                        </a>
+                        <a href="<?php the_field('link'); ?>" target="_blank" class="project__link project__site_link">
+                            <span></span>
+                            Lien vers le site
+                        </a>
+                    </div>
                 </div>
-            </div>
-            <div class="project__img_container">
-                <img src="<?php the_field('cover_img'); ?>" alt="Spotify - image de couverture">
+                <div class="project__img_container">
+                    <a class="project__img_link" href="<?php the_permalink(); ?>">En savoir plus sur <?php the_title() ?></a>
+                    <img class="img" <?= dw_the_img_attributes(get_field('cover_img'), ['thumbnail','medium', 'large']) ?>>
+                </div>
             </div>
         </section>
         <?php endwhile; else: ?>
@@ -84,6 +113,7 @@
             </div>
         <?php endif; ?>
     </section>
+    <?php include 'contact.php'; ?>
 </main>
 
 <?php get_footer(); ?>

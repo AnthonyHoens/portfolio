@@ -3,50 +3,77 @@
 <?php get_header(); ?>
 
 <main class="main">
-    <section class="main__contact contact">
-        <h2 role="heading" aria-level="2" class="contact__title sro">
+    <section class="main__about about main__special_about">
+        <span class="about__grid about__grid_1"></span>
+        <span class="about__grid about__grid_2"></span>
+        <span class="about__grid about__grid_3"></span>
+        <span class="about__grid about__grid_4"></span>
+        <span class="about__grid about__grid_5"></span>
+        <span class="about__grid about__grid_6"></span>
+        <span class="about__grid about__grid_7"></span>
+        <span class="about__grid about__grid_8"></span>
+        <span class="about__grid about__grid_9"></span>
+        <span class="about__grid about__grid_10"></span>
+        <span class="about__grid about__grid_11"></span>
+        <span class="about__grid about__grid_12"></span>
+
+        <h2 role="heading" aria-level="2" class="sro">
             <?php the_title(); ?>
         </h2>
 
-        <div class="contact__second_container second_container">
-            <p class="second_container__title">
-                <?php the_content(); ?>
+
+        <p class="about__special_title">
+            <?php the_field('hello'); ?>
+        </p>
+
+
+        <div class="about__wrap about__wrap_1 wrap">
+            <p class="wrap__text">
+                <?php the_field('about_text'); ?>
             </p>
-
-            <div>
-                <p>
-                    <?php the_field('about_text'); ?>
-                </p>
-                <div>
-                    <img src="<?php the_field('about_img'); ?>" alt="Image à propos de moi.">
-                </div>
-            </div>
-
-            <div>
-                <p>
-                    <?php the_field('passion_text'); ?>
-                </p>
-                <div>
-                    <img src="<?php the_field('passion_img'); ?>" alt="Image à propos de ma passion préférée.">
-                </div>
-            </div>
-
-            <div>
-                <p>
-                    <?php the_field('sport_text'); ?>
-                </p>
-                <div>
-                    <img src="<?php the_field('sport_img'); ?>" alt="Image à propos de mon sport favori.">
-                </div>
+            <div class="about__img_container wrap__img_container">
+                <span class="about__span about__span_1"></span>
+                <span class="about__span about__span_2"></span>
+                <span class="about__span about__span_3"></span>
+                <span class="about__span about__span_4"></span>
+                <img <?= dw_the_img_attributes(get_field('about_img'), ['thumbnail','medium', 'large']) ?>  >
             </div>
         </div>
 
+        <div class="about__wrap about__wrap_2 wrap">
+            <p class="wrap__text">
+                <?php the_field('passion_text'); ?>
+            </p>
+            <div class="about__img_container wrap__img_container">
+                <span class="about__span about__span_1"></span>
+                <span class="about__span about__span_2"></span>
+                <span class="about__span about__span_3"></span>
+                <span class="about__span about__span_4"></span>
+                <img <?= dw_the_img_attributes(get_field('passion_img'), ['thumbnail','medium', 'large']) ?>>
+            </div>
+        </div>
+
+        <div class="about__wrap about__wrap_3 wrap">
+            <p class="wrap__text">
+                <?php the_field('sport_text'); ?>
+            </p>
+            <div class="about__img_container wrap__img_container">
+                <span class="about__span about__span_1"></span>
+                <span class="about__span about__span_2"></span>
+                <span class="about__span about__span_3"></span>
+                <span class="about__span about__span_4"></span>
+                <img <?= dw_the_img_attributes(get_field('sport_img'), ['thumbnail','medium', 'large']) ?>>
+            </div>
+        </div>
+    </section>
+
+    <div>
         <blockquote>
             <p>
                 <?php the_field('philosophy_text'); ?>
             </p>
         </blockquote>
-    </section>
+    </div>
 
     <?php
 
@@ -74,7 +101,7 @@
                     </h3>
                 </div>
                 <div class="project__img_container">
-                    <img src="<?php the_field('cover_img'); ?>" alt="Spotify - image de couverture">
+                    <img <?= dw_the_img_attributes(get_field('cover_img'), ['thumbnail','medium', 'large']) ?>>
                 </div>
             </section>
         <?php endwhile; else: ?>
@@ -85,6 +112,7 @@
             </div>
         <?php endif; ?>
     </section>
+    <?php include 'contact.php'; ?>
 </main>
 
 <?php get_footer(); ?>

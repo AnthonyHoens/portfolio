@@ -5,7 +5,7 @@
         <meta name="viewport"
               content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <title>Anthony Hoens | Portfolio du jeune étudiant passionné par le web!</title>
+        <title><?= is_front_page() ? 'Anthony Hoens | Portfolio du jeune étudiant passionné par le web!' : wp_title('Anthony Hoens |') ?></title>
 
         <link rel="stylesheet" href="<?= dw_asset('/css/theme.css'); ?>">
 
@@ -24,7 +24,7 @@
             <ul class="nav__ul ul">
                 <?php foreach (dw_menu('main') as $link): ?>
                     <li class="nav__li">
-                        <a class="nav__text text" href="<?= $link->url ?>">
+                        <a class="nav__text text <?= $link->classes ?>" href="<?= $link->url ?>">
                             <span class="text__line"></span>
                             <?= $link->label ?>
                         </a>

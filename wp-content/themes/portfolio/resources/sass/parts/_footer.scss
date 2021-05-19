@@ -1,10 +1,11 @@
 .footer {
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+  flex-direction: column;
+  justify-content: flex-start;
   align-items: center;
-  padding: 3.75rem 6rem;
-  background-color: #272727;
+  gap: 2rem;
+  padding: 3.75rem 2rem;
+  background-color: rgba(39, 39, 39, 0.8);
   color: white;
 
   &__nav {
@@ -43,5 +44,20 @@
   }
   a:hover, a:focus {
     color: #1B8284;
+  }
+
+  @media screen and (min-width: 620px) {
+    & {
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+    }
+  }
+
+
+  @media screen and (min-width: 1024px) {
+    & {
+      padding: 3.75rem 6rem;
+    }
   }
 }

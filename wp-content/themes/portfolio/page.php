@@ -12,6 +12,7 @@
                 </p>
             </div>
         </section>
+        <?php include 'contact.php'; ?>
     </main>
 
 <?php get_footer(); ?>

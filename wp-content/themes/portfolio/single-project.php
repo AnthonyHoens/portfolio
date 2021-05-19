@@ -2,7 +2,7 @@
 
 <style>
     .single_project__background_img {
-        background-image: url(<?php the_field('cover_img'); ?>);
+        background-image: url(<?= wp_get_attachment_image_url(get_field('cover_img'), $size = '2048x2048') ?>);
     }
 </style>
 
@@ -31,7 +31,7 @@
                 <?php the_title(); ?> sur différents support.
             </h3>
             <div class="single_project__support_img_container">
-                <img src="<?php the_field('support_img'); ?>" alt="Site de <?php the_title(); ?> sur un ordinateur et un téléphone.">
+                <img <?= dw_the_img_attributes(get_field('support_img'), ['thumbnail','medium', 'large']) ?>>
             </div>
             <p>
                 <?php the_field('support_text'); ?>
@@ -43,7 +43,7 @@
                 Moodboard
             </h3>
             <div class="single_project__moodboard_img_container">
-                <img src="<?php the_field('moodboard_img'); ?>" alt="Moodboard de <?php the_title(); ?>">
+                <img <?= dw_the_img_attributes(get_field('moodboard_img'), ['thumbnail','medium', 'large']) ?>>
             </div>
             <p class="single_project__moodboard_text">
                 <?php the_field('moodboard_text'); ?>
@@ -55,13 +55,14 @@
                 Design
             </h3>
             <div class="single_project__computer_design">
-                <img src="<?php the_field('design_img_computer'); ?>" alt="Design de <?php the_title(); ?> sur ordinateur.">
+                <img <?= dw_the_img_attributes(get_field('design_img_computer'), ['thumbnail','medium', 'large']) ?>>
             </div>
             <div class="single_project__phone_design">
-                <img src="<?php the_field('design_img_phone'); ?>" alt="Design de <?php the_title(); ?> sur téléphone.">
+                <img <?= dw_the_img_attributes(get_field('design_img_phone'), ['medium', 'large']) ?>>
             </div>
         </section>
     </section>
+    <?php include 'contact.php'; ?>
 </main>
 
 <?php get_footer(); ?>

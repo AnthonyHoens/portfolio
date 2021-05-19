@@ -1,4 +1,4 @@
-import Rect from './Rect';
+import Rect from './parts/Rect';
 
 
 const animation = {
@@ -37,7 +37,7 @@ const animation = {
             this.rects.push(new Rect(this))
             this.frameCounter = 0
         }
-        console.log(this.rects.length)
+
         this.rects.forEach(rect => {
             rect.update()
 
@@ -49,6 +49,10 @@ const animation = {
         window.addEventListener('resize', ()=> {
             this.canvas.width = window.innerWidth;
             this.canvas.height = window.innerHeight;
+
+            this.rects.forEach(rect => {
+                rect.resetLifetime();
+            })
         })
 
         window.requestAnimationFrame(() => {

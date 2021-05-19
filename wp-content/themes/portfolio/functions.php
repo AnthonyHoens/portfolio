@@ -1,5 +1,31 @@
 <?php
 
+/* ****
+ *  Return the attributes of an img
+ * ****/
+
+function dw_the_img_attributes($id, $sizes = []) {
+    $src = wp_get_attachment_url($id);
+    $thumbnail_meta =  get_post_meta($id);
+
+
+    $sizes = array_map(function($size) use ($id) {
+        $data = wp_get_attachment_image_src($id, $size);
+
+
+        return $data[0] . ' ' . $data[1] . 'w';
+    }, $sizes);
+
+
+    $srcset = implode(', ', $sizes);
+    $alt = $thumbnail_meta['_wp_attachment_image_alt'][0] ?? null;
+
+
+    return 'src="' . $src . '" srcset="' . $srcset . '" alt="' . $alt . '"';
+}
+
+
+
 
 /* ****
  *  Return a compiled asset's URI
@@ -15,6 +41,7 @@ function dw_menu($location)
     $links = array_map(function ($post) {
         $link = new \stdClass();
 
+        $link->classes = $post->classes[0];
         $link->url = $post->url;
         $link->label = $post->title;
 
