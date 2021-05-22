@@ -67,13 +67,13 @@
         </div>
     </section>
 
-    <div>
-        <blockquote>
-            <p>
-                <?php the_field('philosophy_text'); ?>
-            </p>
-        </blockquote>
-    </div>
+
+    <blockquote class="philosophy">
+        <p class="philosophy__text">
+            <?php the_field('philosophy_text'); ?>
+        </p>
+    </blockquote>
+
 
     <?php
 
@@ -97,10 +97,11 @@
                         <?php the_field('number'); ?>
                     </p>
                     <h3 class="project__title" aria-level="3" role="heading">
-                        <?php the_title(); ?>
+                        <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
                     </h3>
                 </div>
                 <div class="project__img_container">
+                    <a href="<?php the_permalink(); ?>"><span class="sro">En savoir plus à propos de <?php the_title() ?></span></a>
                     <img <?= dw_the_img_attributes(get_field('cover_img'), ['thumbnail','medium', 'large']) ?>>
                 </div>
             </section>

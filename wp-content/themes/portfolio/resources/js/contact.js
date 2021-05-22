@@ -9,18 +9,6 @@ const siteUrl = window.location.protocol + '//' + window.location.hostname + win
 const contactUrl = siteUrl + '#contact';
 
 
-function verifyField(input) {
-    if(input.type == 'text') {
-        if(!input.value) {
-
-        }
-    }
-    if(input.type == 'email') {
-
-    }
-}
-
-
 // Event
 
 formInput.forEach(input => {
@@ -29,9 +17,6 @@ formInput.forEach(input => {
             window.location.href = contactUrl
             input.focus()
         }
-        input.addEventListener('keydown', function () {
-            verifyField(input)
-        })
     }, false)
 })
 

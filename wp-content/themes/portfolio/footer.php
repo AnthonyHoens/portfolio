@@ -6,7 +6,7 @@
                 <ul class="nav__container">
                     <?php foreach (dw_menu('main') as $link): ?>
                         <li class="nav__item">
-                            <a href="<?= $link->url ?>" class="nav__text <?= $link->classes ?>">
+                            <a href="<?= $link->url ?>" class="nav__text <?= $link->active ?> <?= $link->classes ?>">
                                 <?= $link->label ?>
                             </a>
                         </li>

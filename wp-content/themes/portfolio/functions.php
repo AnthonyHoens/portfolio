@@ -45,6 +45,14 @@ function dw_menu($location)
         $link->url = $post->url;
         $link->label = $post->title;
 
+        $actual_link = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? "https" : "http") . "://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
+
+        if ($actual_link == $link->url) {
+            $link->active = 'nav__active';
+        } elseif ($actual_link == $link->url) {
+            $link->active = 'nav__active';
+        }
+
         return $link;
     }, $links);
 

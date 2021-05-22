@@ -1,0 +1,237 @@
+.single_project {
+
+
+  &__landing_page {
+    width: 100%;
+  }
+
+  &__background_img {
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    background-size: auto 100%;
+    background-position: center;
+    padding: 7rem 2rem 6rem;
+    margin-bottom: 8rem;
+  }
+
+  &__number {
+    font-family: "Abril Fatface", cursive;
+    font-size: 11.302rem;
+    line-height: normal;
+    margin-bottom: -2rem;
+    color: rgba(27, 130, 132, 0.5);
+  }
+
+  &__title {
+    font-size: 1.999rem;
+    color: white;
+    margin-bottom: 2rem;
+  }
+
+  &__link {
+    display: inline-block;
+    width: 16.75rem;
+    position: relative;
+    text-align: center;
+    padding: 1.25rem 0;
+    text-decoration: none;
+    color: white;
+    border-radius: 10px;
+    overflow: hidden;
+    border: 1px solid white;
+    box-shadow: none;
+    z-index: 10;
+    background-color: rgba(27, 27, 27, 0.25);
+    transition: box-shadow 0.1s 0.4s linear;
+  }
+
+  &__link span {
+    position: absolute;
+    z-index: -3;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 0%;
+    transition: width .5s ease-in;
+    background-color: rgb(27, 130, 132);
+  }
+
+  &__link:hover, &__link:focus {
+    box-shadow: 0 0 10px #1B8284;
+  }
+
+  &__link:hover span, &__link:focus span {
+    width: 100%;
+  }
+
+  &__site_link {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 4rem;
+  }
+
+  &__support {
+    width: 100%;
+    padding: 0 10%;
+    margin-bottom: -15rem;
+  }
+
+  &__support img {
+    width: 100%;
+  }
+
+  &__support_img_container {
+    margin-bottom: 5rem;
+  }
+
+  &__support__text {
+    max-width: 35rem;
+    width: 100%;
+    margin: 0 auto;
+    color: white;
+  }
+
+  &__moodboard {
+    background-color: rgb(27, 27, 27);
+    padding: 23.875rem 2rem 7rem;
+  }
+
+  .moodboard {
+
+    &__title {
+      display: inline-block;
+      text-transform: uppercase;
+      color: white;
+      margin-bottom: 2rem;
+    }
+
+    &__title span {
+      display: block;
+      position: relative;
+      left: -1rem;
+      height: 1px;
+      width: 100%;
+      background-color: #B3FEFF;
+    }
+
+    &__img_container {
+      width: 100%;
+      margin-bottom: 1rem;
+    }
+
+    &__img_container img {
+      width: 100%;
+    }
+
+    &__text {
+      padding: 1rem;
+      color: white;
+      background-color: rgba(0, 0, 0, 0.5);
+    }
+  }
+
+  &__design {
+    background-color: rgb(27, 27, 27);
+    padding: 7rem 2rem;
+  }
+
+  .design {
+
+    &__title {
+      display: inline-block;
+      text-transform: uppercase;
+      color: white;
+      margin-bottom: 2rem;
+    }
+
+    &__title span {
+      display: block;
+      position: relative;
+      left: -1rem;
+      height: 1px;
+      width: 100%;
+      background-color: #B3FEFF;
+    }
+
+    &__computer_design, &__phone_design {
+      width: 100%;
+    }
+
+    &__computer_design img, &__phone_design img {
+      width: 100%;
+    }
+
+  }
+
+
+  @media screen and (min-width: 1024px) {
+    &__background_img {
+      padding: 7rem 6rem 6rem;
+    }
+
+    &__support {
+      padding: 0 20%;
+    }
+
+    &__moodboard {
+      padding: 23.875rem 6rem 6rem;
+    }
+
+    .moodboard {
+
+
+      &__container {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      &__img_container {
+        flex: 7;
+        margin-right: -8rem;
+      }
+
+      &__text {
+        flex: 4;
+      }
+    }
+
+    .design {
+
+
+      &__container {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-start;
+        gap: 1.5rem;
+      }
+
+      &__computer_design {
+        flex: 6;
+      }
+
+      &__phone_design {
+        flex: 4;
+      }
+    }
+
+    &__design {
+      padding: 7rem 6rem;
+    }
+  }
+
+  @media screen and (min-width: 1580px) {
+
+    &__moodboard {
+      padding: 23.875rem 15.125rem 6rem;
+    }
+
+    &__design {
+      padding: 7rem 15.125rem;
+    }
+  }
+}

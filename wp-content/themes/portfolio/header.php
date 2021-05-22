@@ -25,7 +25,7 @@
                 <?php foreach (dw_menu('main') as $link): ?>
                     <li class="nav__li">
                         <a class="nav__text text <?= $link->classes ?>" href="<?= $link->url ?>">
-                            <span class="text__line"></span>
+                            <span class="text__line <?= $link->active ?>"></span>
                             <?= $link->label ?>
                         </a>
                     </li>
