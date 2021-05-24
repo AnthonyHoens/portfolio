@@ -1,4 +1,22 @@
 <?php get_header(); ?>
+<div class="torch__option">
+    <p id="optionBtn">Option de lumière</p>
+</div>
+<div class="torch__header torch__is_header">
+    <div>
+        <label for="circle_size">Régler la taille du cercle</label>
+        <input type="range" id="circle_size" name="circle_size" min="5" max="30">
+    </div>
+    <div>
+        <label for="light_activate">Activer ou désactiver la lumière</label>
+        <input type="checkbox" id="light_activate" name="light_activate" checked>
+    </div>
+</div>
+
+<div class="torch">
+    <p class="torch__text sro">Hidden text</p>
+    <div class="torch__light"></div>
+</div>
 
 <main class="main">
     <section class="main__landing_page landing_page">

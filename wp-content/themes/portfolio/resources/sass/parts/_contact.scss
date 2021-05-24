@@ -1,6 +1,7 @@
 .contact {
   font-family: 'Reem Kufi', sans-serif;
   position: fixed;
+  z-index: 11000;
   top: 0;
   right: 0;
   width: 100%;
@@ -9,7 +10,6 @@
   padding: 6rem 4rem;
   background-color: rgb(50, 50, 50);
   color: white;
-  z-index: 10000;
   overflow-y: auto;
   transform: translateX(100%);
   transition: 1s ease;

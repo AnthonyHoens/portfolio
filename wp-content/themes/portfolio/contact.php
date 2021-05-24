@@ -6,5 +6,5 @@
         Contactez-moi
     </h2>
 
-    <?php echo do_shortcode( '[contact-form-7 id="65" title="Contact"]' ); ?>
+    <?= do_shortcode( '[contact-form-7 id="65" title="Contact"]' ); ?>
 </section>
