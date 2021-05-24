@@ -2,10 +2,10 @@
 <div class="torch__option">
     <p id="optionBtn">Option de lumière</p>
 </div>
-<div class="torch__header torch__is_header">
+<div class="torch__header">
     <div>
         <label for="circle_size">Régler la taille du cercle</label>
-        <input type="range" id="circle_size" name="circle_size" min="5" max="30">
+        <input type="range" id="circle_size" name="circle_size" min="10" max="15">
     </div>
     <div>
         <label for="light_activate">Activer ou désactiver la lumière</label>

@@ -82,7 +82,7 @@
         }
       }
 
-      &__text:hover .text__line, &__text:focus {
+      &__text:hover .text__line, &__text:focus .text__line {
         width: 100%;
       }
     }

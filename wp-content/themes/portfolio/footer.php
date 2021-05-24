@@ -27,6 +27,7 @@
 
         <?php if (is_front_page()): ?>
             <script src="<?= dw_asset('js/app.js') ?>"></script>
+            <script src="<?= dw_asset('js/lightEffect.js') ?>"></script>
         <?php endif; ?>
 
         <?php wp_footer(); ?>

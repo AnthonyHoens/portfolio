@@ -15,7 +15,7 @@
 
     <header class="header">
         <h1 aria-level="1" role="heading" class="header__title">
-            <a href="/">Anthony Hoens</a>
+            <a href="/#">Anthony Hoens</a>
         </h1>
         <nav role="navigation" class="header__nav nav">
             <h2 class="sro nav__title" aria-level="2" role="heading">
