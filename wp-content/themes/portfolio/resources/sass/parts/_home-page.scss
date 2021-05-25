@@ -225,7 +225,7 @@
           border-left: 2px solid #1B8284;
         }
 
-        &__img_container:hover .about__span_1 {
+        &__img_container:hover .about__span_1, &__img_hover .about__span_1 {
           top: -1rem;
           left: -1rem;
         }
@@ -237,7 +237,7 @@
           border-right: 2px solid #1B8284;
         }
 
-        &__img_container:hover .about__span_2 {
+        &__img_container:hover .about__span_2, &__img_hover .about__span_2 {
           top: -1rem;
           right: -1rem;
         }
@@ -249,7 +249,7 @@
           border-left: 2px solid #1B8284;
         }
 
-        &__img_container:hover .about__span_3 {
+        &__img_container:hover .about__span_3, &__img_hover .about__span_3 {
           bottom: -1rem;
           left: -1rem;
         }
@@ -261,7 +261,7 @@
           border-right: 2px solid #1B8284;
         }
 
-        &__img_container:hover .about__span_4 {
+        &__img_container:hover .about__span_4, &__img_hover .about__span_4 {
           bottom: -1rem;
           right: -1rem;
         }
@@ -312,25 +312,6 @@
           color: white;
           padding: 10rem 2rem;
 
-          &:hover .project__span_1 {
-            top: 2rem;
-            left: 2rem;
-          }
-
-          &:hover .project__span_2 {
-            top: 2rem;
-            right: 2rem;
-          }
-
-          &:hover .project__span_3 {
-            bottom: 2rem;
-            left: 2rem;
-          }
-
-          &:hover .project__span_4 {
-            bottom: 2rem;
-            right: 2rem;
-          }
 
           &:nth-child(even) {
             background-color: #272727;
@@ -550,6 +531,26 @@
             }
 
           }
+
+          &:hover .project__span_1, &_hover .project__span_1 {
+            top: 2rem;
+            left: 2rem;
+          }
+
+          &:hover .project__span_2, &_hover .project__span_2 {
+            top: 2rem;
+            right: 2rem;
+          }
+
+          &:hover .project__span_3, &_hover .project__span_3 {
+            bottom: 2rem;
+            left: 2rem;
+          }
+
+          &:hover .project__span_4, &_hover .project__span_4 {
+            bottom: 2rem;
+            right: 2rem;
+          }
         }
       }
     }
@@ -725,24 +726,24 @@
           width: 100%;
         }
 
-        &__img_container:hover .about__span_1 {
+        &__img_container:hover .about__span_1, &__img_hover .about__span_1 {
           top: -1.25rem;
           left: -1.25rem;
         }
 
 
-        &__img_container:hover .about__span_2 {
+        &__img_container:hover .about__span_2, &__img_hover .about__span_2 {
           top: -1.25rem;
           right: -1.25rem;
         }
 
 
-        &__img_container:hover .about__span_3 {
+        &__img_container:hover .about__span_3, &__img_hover .about__span_3 {
           bottom: -1.25rem;
           left: -1.25rem;
         }
 
-        &__img_container:hover .about__span_4 {
+        &__img_container:hover .about__span_4, &__img_hover .about__span_4 {
           bottom: -1.25rem;
           right: -1.25rem;
         }
@@ -763,25 +764,6 @@
           &__project {
             padding: 10rem 6rem;
 
-            &:hover .project__span_1 {
-              top: 4rem;
-              left: 5rem;
-            }
-
-            &:hover .project__span_2 {
-              top: 4rem;
-              right: 5rem;
-            }
-
-            &:hover .project__span_3 {
-              bottom: 4rem;
-              left: 5rem;
-            }
-
-            &:hover .project__span_4 {
-              bottom: 4rem;
-              right: 5rem;
-            }
 
             &:nth-child(even) .project__info_container {
               order: 0;
@@ -830,6 +812,26 @@
                 flex: 6;
               }
 
+            }
+
+            &:hover .project__span_1, &_hover .project__span_1 {
+              top: 4rem;
+              left: 5rem;
+            }
+
+            &:hover .project__span_2, &_hover .project__span_2 {
+              top: 4rem;
+              right: 5rem;
+            }
+
+            &:hover .project__span_3, &_hover .project__span_3 {
+              bottom: 4rem;
+              left: 5rem;
+            }
+
+            &:hover .project__span_4, &_hover .project__span_4 {
+              bottom: 4rem;
+              right: 5rem;
             }
           }
         }
@@ -892,24 +894,24 @@
             margin-top: 12.75rem;
             margin-bottom: 0;
           }
-          &__img_container:hover .about__span_1 {
+          &__img_container:hover .about__span_1, &__img_hover .about__span_1 {
             top: -1.5rem;
             left: -1.5rem;
           }
 
 
-          &__img_container:hover .about__span_2 {
+          &__img_container:hover .about__span_2, &__img_hover .about__span_2 {
             top: -1.5rem;
             right: -1.5rem;
           }
 
 
-          &__img_container:hover .about__span_3 {
+          &__img_container:hover .about__span_3, &__img_hover .about__span_3 {
             bottom: -1.5rem;
             left: -1.5rem;
           }
 
-          &__img_container:hover .about__span_4 {
+          &__img_container:hover .about__span_4, &__img_hover .about__span_4 {
             bottom: -1.5rem;
             right: -1.5rem;
           }
@@ -944,25 +946,6 @@
               margin-left: -7.625rem;
             }
 
-            &:hover .project__span_1 {
-              top: 6.75rem;
-              left: 9rem;
-            }
-
-            &:hover .project__span_2 {
-              top: 6.75rem;
-              right: 9rem;
-            }
-
-            &:hover .project__span_3 {
-              bottom: 6.75rem;
-              left: 9rem;
-            }
-
-            &:hover .project__span_4 {
-              bottom: 6.75rem;
-              right: 9rem;
-            }
 
             .project {
 
@@ -998,6 +981,26 @@
                 flex: 7;
               }
 
+            }
+
+            &:hover .project__span_1, &_hover .project__span_1 {
+              top: 6.75rem;
+              left: 9rem;
+            }
+
+            &:hover .project__span_2, &_hover .project__span_2 {
+              top: 6.75rem;
+              right: 9rem;
+            }
+
+            &:hover .project__span_3, &_hover .project__span_3 {
+              bottom: 6.75rem;
+              left: 9rem;
+            }
+
+            &:hover .project__span_4, &_hover .project__span_4 {
+              bottom: 6.75rem;
+              right: 9rem;
             }
           }
         }

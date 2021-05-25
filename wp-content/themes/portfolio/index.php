@@ -9,7 +9,7 @@
     </div>
     <div>
         <label for="light_activate">Activer ou désactiver la lumière</label>
-        <input type="checkbox" id="light_activate" name="light_activate" checked>
+        <input type="checkbox" id="light_activate" name="light_activate">
     </div>
 </div>
 
@@ -62,7 +62,7 @@
         </p>
 
 
-        <div class="about__img_container">
+        <div class="about__img_container about__img_hover">
             <span class="about__span about__span_1"></span>
             <span class="about__span about__span_2"></span>
             <span class="about__span about__span_3"></span>
