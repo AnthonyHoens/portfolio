@@ -1,25 +1,43 @@
 .torch {
-  display: block;
+  display: none;
   z-index: 10000;
   position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
   width: auto;
   padding: 0;
   margin: 0;
   clip: auto;
   white-space: normal;
-  top: 0;
-  right: 0;
-  left: 0;
   overflow: hidden;
   height: 100vh;
   background: transparent;
 
+  & canvas {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+  }
+
+  &__img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
+
   &__option {
     position: fixed;
-    display: flex;
+    display: none;
     justify-content: center;
     align-items: center;
     text-align: center;
+    top: 0;
     left: 50%;
     transform: translateX(-50%);
     height: 9.5rem;
@@ -42,7 +60,8 @@
     transform: translateY(-100%);
     z-index: 10005;
     color: white;
-    display: flex;
+    display: none;
+    top: 0;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
@@ -71,6 +90,8 @@
     position: absolute;
     left: 0;
     top: 0;
+    right: 0;
+    bottom: 0;
     transform: translate(-50%, -50%);
     width: 200%;
     height: 200%;
@@ -86,7 +107,14 @@
   }
 
   @media screen and (min-width: 1024px) {
+    & {
+      display: initial;
+    }
+    &__option {
+      display: flex;
+    }
     &__header {
+      display: flex;
       padding: 2rem 6rem;
     }
   }

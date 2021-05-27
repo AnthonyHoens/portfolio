@@ -342,7 +342,7 @@
           }
 
           &:nth-child(even) .project__info_container {
-            order: 0;
+            order: -1;
             margin-bottom: 3rem;
           }
 
@@ -764,15 +764,15 @@
           &__project {
             padding: 10rem 6rem;
 
-
             &:nth-child(even) .project__info_container {
-              order: 0;
               margin-right: -7.625rem;
+              margin-bottom: 0;
             }
 
             &:nth-child(odd) .project__info_container {
               order: 3;
               margin-left: -7.625rem;
+              margin-top: 0;
             }
 
             .project {
@@ -937,7 +937,6 @@
           &__project {
 
             &:nth-child(even) .project__info_container {
-              order: 0;
               margin-right: -7.625rem;
             }
 

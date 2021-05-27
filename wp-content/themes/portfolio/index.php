@@ -13,8 +13,13 @@
     </div>
 </div>
 
+<div class="torch__img">
+
+</div>
+
+
 <div class="torch">
-    <p class="torch__text sro">Hidden text</p>
+    <p class="torch__text sro">Effet de lumière visuel</p>
     <div class="torch__light"></div>
 </div>
 
@@ -47,18 +52,24 @@
         <span class="about__grid about__grid_11"></span>
         <span class="about__grid about__grid_12"></span>
         <h2 class="about__title" aria-level="2" role="heading">
-            Á propos
+            <span>Á propos</span>
         </h2>
         <p class="about__text about__text_1">
-            Bonjour, je m'appelle Anthony Hoens, étudiant en 2ème année à la Haute École de la province de Liège.
-            Passionné de développement depuis 4ans, j'ai donc décidé d'en faire mon métier.
-            Je suis actuellement un font-end et back-end developper
+            <span>
+                Bonjour, je m'appelle Anthony Hoens, étudiant en 2ème année à la Haute École de la province de Liège.
+                Passionné de développement depuis 4ans, j'ai donc décidé d'en faire mon métier.
+                Je suis actuellement un font-end et back-end developper
+            </span>
         </p>
         <p class="about__text about__text_2">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque vitae pulvinar velit, vel viverra magna. Nam porttitor metus sit amet ligula ultricies, a sollicitudin diam commodo. Aenean et sagittis sapien. Sed eu sem sit amet felis finibus feugiat. Ut interdum porttitor porta. Vestibulum.
+            <span>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque vitae pulvinar velit, vel viverra magna. Nam porttitor metus sit amet ligula ultricies, a sollicitudin diam commodo. Aenean et sagittis sapien. Sed eu sem sit amet felis finibus feugiat. Ut interdum porttitor porta. Vestibulum.
+            </span>
         </p>
         <p class="about__text about__text_3">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque vitae pulvinar velit, vel viverra magna. Nam porttitor metus sit amet ligula ultricies, a sollicitudin diam commodo. Aenean et sagittis sapien. Sed eu sem sit amet felis finibus feugiat. Ut interdum porttitor porta. Vestibulum.
+            <span>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque vitae pulvinar velit, vel viverra magna. Nam porttitor metus sit amet ligula ultricies, a sollicitudin diam commodo. Aenean et sagittis sapien. Sed eu sem sit amet felis finibus feugiat. Ut interdum porttitor porta. Vestibulum.
+            </span>
         </p>
 
 
@@ -67,7 +78,7 @@
             <span class="about__span about__span_2"></span>
             <span class="about__span about__span_3"></span>
             <span class="about__span about__span_4"></span>
-            <img class="about__img" src="http://portfolio.local/wp-content/uploads/2021/05/hoens_anthony.png" alt="Photo de Hoens Anthony">
+            <img class="about__img" src="https://anthony-hoens.be/wp-content/uploads/2021/05/hoens_anthony.png" alt="Photo de Hoens Anthony">
             <a href="http://portfolio.local/about/" class="about__img_text">En savoir plus<span class="sro"> à propos de anthony hoens</span></a>
         </div>
     </section>
@@ -95,6 +106,10 @@
             <span class="project__span project__span_3"></span>
             <span class="project__span project__span_4"></span>
             <div class="project__container">
+                <div class="project__img_container">
+                    <a class="project__img_link" href="<?php the_permalink(); ?>">En savoir plus sur <?php the_title() ?></a>
+                    <img class="img" <?= dw_the_img_attributes(get_field('cover_img'), ['thumbnail','medium', 'large']) ?>>
+                </div>
                 <div class="project__info_container">
                     <p class="project__number">
                         <?php the_field('number'); ?>
@@ -116,10 +131,6 @@
                             Lien vers le site
                         </a>
                     </div>
-                </div>
-                <div class="project__img_container">
-                    <a class="project__img_link" href="<?php the_permalink(); ?>">En savoir plus sur <?php the_title() ?></a>
-                    <img class="img" <?= dw_the_img_attributes(get_field('cover_img'), ['thumbnail','medium', 'large']) ?>>
                 </div>
             </div>
         </section>

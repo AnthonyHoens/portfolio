@@ -36,14 +36,14 @@
     border: none;
     padding: 0;
     cursor: pointer;
-    background-image: url("http://portfolio.local/wp-content/themes/portfolio/public/img/close_btn.svg");
+    background-image: url("https://anthony-hoens.be/wp-content/themes/portfolio/public/img/close_btn.svg");
     background-repeat: no-repeat;
     background-size: 100% 100%;
     transition: background .3s ease;
   }
 
   &__close:hover, &__close:focus {
-    background-image: url("http://portfolio.local/wp-content/themes/portfolio/public/img/close_btn_hover.svg");
+    background-image: url("https://anthony-hoens.be/wp-content/themes/portfolio/public/img/close_btn_hover.svg");
   }
 
 

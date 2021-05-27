@@ -22,7 +22,6 @@ formInput.forEach(input => {
 
 
 closeBtn.addEventListener('focus', function () {
-    btnPath.fill = '#1B8284';
     if (window.location.href != contactUrl) {
         window.location.href = contactUrl
         closeBtn.focus()

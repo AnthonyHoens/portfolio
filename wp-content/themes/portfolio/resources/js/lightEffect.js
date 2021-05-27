@@ -1,8 +1,9 @@
-const torch = document.getElementsByClassName("torch")[0];
+const torch = document.querySelector('.torch');
 let torchWidth = torch.clientWidth;
 let torchHeight = torch.clientHeight;
-const torchLight = document.getElementsByClassName("torch__light")[0];
-const torchHeader = document.getElementsByClassName('torch__header')[0];
+const torchLight = document.querySelector('.torch__light');
+const torchHeader = document.querySelector('.torch__header');
+const torchDiv = document.querySelector('.torch__img');
 
 const range = document.querySelector('#circle_size');
 const checkbox = document.querySelector('#light_activate');
@@ -15,8 +16,60 @@ const projectsSection = document.querySelectorAll('.project');
 const imgClass = 'about__img_hover';
 const projectClass = 'projects__project_hover';
 
+const element = document.querySelectorAll(
+        '.header h1,' +
+                 '.header li a,' +
+                 '.landing_page h1,' +
+                 '.landing_page p,' +
+                 '.landing_page a,' +
+                 '.about h2 span,' +
+                 '.about p span,' +
+                 '.about img,' +
+                 '.project__info_container,' +
+                 '.project img,' +
+                 '.footer a,' +
+                 '.footer small');
+let lightImg = [];
+
+function createElementWhileLight(el) {
+    const createElement = document.createElement('img');
+    let widthHeight = null;
+    createElement.style.position = 'absolute';
+    createElement.style.zIndex = "10004";
+    if (el.nodeName == 'IMG') {
+        widthHeight = 40;
+        createElement.style.width = widthHeight + 'px';
+        createElement.style.height = widthHeight + 'px';
+        createElement.src = 'https://anthony-hoens.be/wp-content/themes/portfolio/public/img/img_rect.svg'
+    } else if (el.classList[0] == 'project__info_container') {
+        widthHeight = 20;
+        createElement.style.width = widthHeight + 'px';
+        createElement.style.height = widthHeight + 'px';
+        createElement.src = 'https://anthony-hoens.be/wp-content/themes/portfolio/public/img/rect.svg'
+    } else {
+        widthHeight = 10;
+        createElement.style.width = widthHeight + 'px';
+        createElement.style.height = widthHeight + 'px';
+        createElement.src = 'https://anthony-hoens.be/wp-content/themes/portfolio/public/img/rect.svg'
+    }
+    createElement.style.top = getOffset(el).top + (el.offsetHeight/ 2) - (widthHeight / 2) + 'px';
+    createElement.style.left = getOffset(el).left + (el.offsetWidth / 2) - (widthHeight / 2)  + 'px';
+
+
+    torchDiv.appendChild(createElement)
+    lightImg.push([createElement, el])
+}
+
+function changeElementWhileLightResize() {
+    lightImg.forEach(img => {
+        img[0].style.top = getOffset(img[1]).top + (img[1].offsetHeight/ 2) - (img[0].offsetHeight / 2) + 'px';
+        img[0].style.left = getOffset(img[1]).left + (img[1].offsetWidth / 2) - (img[0].offsetWidth / 2) + 'px';
+    })
+}
+
 function setSessionStorage() {
     sessionStorage.setItem('checked', checkbox.checked);
+    sessionStorage.setItem('rangeCircle', range.value);
 }
 
 function getOffset(el) {
@@ -27,8 +80,8 @@ function getOffset(el) {
     };
 }
 
-function isCursorOnEl(e, el) {
-    return e.pageX > getOffset(el).left && e.pageX < getOffset(el).left + el.offsetWidth && e.pageY > getOffset(el).top && e.pageY < getOffset(el).top + el.offsetHeight;
+function isCursorOnEl(e, el, radius = 0) {
+    return e.pageX + (radius / 2) > getOffset(el).left && e.pageX - (radius / 2) < getOffset(el).left + el.offsetWidth && e.pageY + (radius / 2) > getOffset(el).top && e.pageY - (radius / 2) < getOffset(el).top + el.offsetHeight;
 }
 
 function handleLampMove (e) {
@@ -45,16 +98,26 @@ function changeTorchSize() {
 }
 
 
-range.addEventListener("change", changeTorchSize, false);
+range.addEventListener("change", () => {
+    setSessionStorage()
+    changeTorchSize()
+}, false);
 
-checkbox.addEventListener('change', function(e) {
+checkbox.addEventListener('change', function() {
     setSessionStorage()
     if (torch.classList[1] == 'abs_no_torch') {
         torch.classList.remove('abs_no_torch')
     }
     if (this.checked) {
+        element.forEach(el => {
+            createElementWhileLight(el);
+        })
         torch.classList.remove('no_torch')
     } else {
+        lightImg.forEach(img => {
+            img[0].remove()
+        })
+        lightImg = [];
         torch.classList.add('no_torch')
     }
 }, false)
@@ -81,6 +144,13 @@ torch.addEventListener('mousemove', function (e) {
     } else {
         img.classList.remove(imgClass);
     }
+    lightImg.forEach(img => {
+        if (isCursorOnEl(e, img[0], (range.value * 30))) {
+            img[0].classList.add('sro');
+        } else {
+            img[0].classList.remove('sro');
+        }
+    })
     projectsSection.forEach(project => {
         if (isCursorOnEl(e, project)) {
             project.classList.add(projectClass);
@@ -116,25 +186,40 @@ torchHeader.addEventListener("touchstart", handleLampMove);
 torchHeader.addEventListener("touchend", handleLampMove);
 
 window.addEventListener("resize", () => {
+    changeElementWhileLightResize()
     torchWidth = torch.clientWidth;
     torchHeight = torch.clientHeight;
 });
 
 window.addEventListener('load', function(e) {
     let checkedValue = null;
+    let rangeCircle = null;
     const sessionItemStorageChecked = JSON.parse(sessionStorage.getItem('checked'));
+    const sessionItemStorageRange = JSON.parse(sessionStorage.getItem('rangeCircle'));
 
     if (sessionItemStorageChecked === true) {
         checkedValue = 'checked';
+        rangeCircle = sessionItemStorageRange;
     } else {
         checkedValue = null;
+        rangeCircle = sessionItemStorageRange;
     }
 
     checkbox.checked = checkedValue;
+    range.value = rangeCircle;
+
+    changeTorchSize()
 
     if (checkbox.checked) {
+        element.forEach(el => {
+            createElementWhileLight(el);
+        })
         torch.classList.remove('abs_no_torch')
     } else {
+        lightImg.forEach(img => {
+            img[0].remove()
+        })
+        lightImg = [];
         torch.classList.add('abs_no_torch')
     }
 }, false)
