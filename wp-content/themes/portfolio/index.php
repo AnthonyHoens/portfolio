@@ -9,7 +9,7 @@
     </div>
     <div>
         <label for="light_activate">Activer ou désactiver la lumière</label>
-        <input type="checkbox" id="light_activate" name="light_activate">
+        <input type="checkbox" id="light_activate" name="light_activate" checked>
     </div>
 </div>
 
@@ -24,15 +24,15 @@
 </div>
 
 <main class="main">
-    <section class="main__landing_page landing_page">
+    <section class="main__landing_page landing_page" itemscope itemtype="https://schema.org/Person">
         <canvas class="landing_page__canvas" id="animation"></canvas>
         <h1 class="landing_page__title" aria-level="1" role="heading">
-            Hoens Anthony<span class="sro">, jeune étudiant de 23 ans vous accompagnant vers de nouvelles aventures&nbsp;!</span>
+            <span itemprop="familyName">Hoens</span> <span itemprop="givenName">Anthony</span><span class="sro">, jeune étudiant de 23 ans vous accompagnant vers de nouvelles aventures&nbsp;!</span>
         </h1>
-        <p class="landing_page__text">
+        <p class="landing_page__text" itemprop="jobTitle">
             Front End / Back end Dev
         </p>
-        <a href="mailto:anthony-hoens@hotmail.com" class="landing_page__link link">
+        <a href="mailto:anthony-hoens@hotmail.com" class="landing_page__link link" itemprop="url">
             <span class="link__bg"></span>
             Contactez-moi
         </a>

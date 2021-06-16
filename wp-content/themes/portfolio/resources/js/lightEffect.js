@@ -36,6 +36,7 @@ function createElementWhileLight(el) {
     let widthHeight = null;
     createElement.style.position = 'absolute';
     createElement.style.zIndex = "10004";
+    createElement.style.transition = 'opacity .3s ease';
     if (el.nodeName == 'IMG') {
         widthHeight = 40;
         createElement.style.width = widthHeight + 'px';
@@ -146,9 +147,9 @@ torch.addEventListener('mousemove', function (e) {
     }
     lightImg.forEach(img => {
         if (isCursorOnEl(e, img[0], (range.value * 30))) {
-            img[0].classList.add('sro');
+            img[0].style.opacity = '0';
         } else {
-            img[0].classList.remove('sro');
+            img[0].style.opacity = '1';
         }
     })
     projectsSection.forEach(project => {
@@ -184,6 +185,9 @@ torch.addEventListener("touchend", handleLampMove);
 torchHeader.addEventListener("mousemove", handleLampMove);
 torchHeader.addEventListener("touchstart", handleLampMove);
 torchHeader.addEventListener("touchend", handleLampMove);
+optionBtn.addEventListener("mousemove", handleLampMove);
+optionBtn.addEventListener("touchstart", handleLampMove);
+optionBtn.addEventListener("touchend", handleLampMove);
 
 window.addEventListener("resize", () => {
     changeElementWhileLightResize()

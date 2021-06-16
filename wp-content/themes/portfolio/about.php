@@ -67,7 +67,6 @@
         </div>
     </section>
 
-
     <blockquote class="philosophy">
         <p class="philosophy__text">
             <?php the_field('philosophy_text'); ?>

@@ -144,7 +144,7 @@
         }
 
         &__special_title {
-          font-size: 7.993rem;
+          font-size: 5rem;
           line-height: normal;
           grid-column: 1 / 5;
           grid-row: 1;
@@ -605,6 +605,10 @@
           grid-template-columns: repeat(7, 1fr);
           column-gap: 1.25rem;
           row-gap: 0;
+        }
+
+        &__special_title {
+          font-size: 7.993rem;
         }
 
         &__wrap .wrap__img_container {

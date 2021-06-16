@@ -12,6 +12,9 @@ function dw_the_img_attributes($id, $sizes = []) {
     $sizes = array_map(function($size) use ($id) {
         $data = wp_get_attachment_image_src($id, $size);
 
+        if(is_null($src)) {
+            $src = $data[0];
+        }
 
         return $data[0] . ' ' . $data[1] . 'w';
     }, $sizes);
