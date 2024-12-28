@@ -1,0 +1,52 @@
+@import "font";
+@import "reset";
+
+html {
+  font-size: 16px;
+  font-family: "Reem Kufi", sans-serif;
+  color: #808080;
+  scroll-behavior: smooth;
+}
+
+body, body * {
+  box-sizing: border-box;
+}
+
+body::-webkit-scrollbar, body *::-webkit-scrollbar {
+  width: .5em;
+  border: none;
+}
+
+body::-webkit-scrollbar-track, body *::-webkit-scrollbar-track {
+  background-color: #272727;
+}
+
+body::-webkit-scrollbar-thumb,
+body *::-webkit-scrollbar-thumb {
+  background-color: #1B8284;
+  border-radius: 9999px;
+}
+
+p {
+  font-size: 1rem;
+  line-height: 25px;
+}
+
+.sro {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+@import "parts/header";
+@import "parts/home-page";
+@import "parts/footer";
+@import "parts/project";
+@import "parts/contact";
+@import "parts/about";

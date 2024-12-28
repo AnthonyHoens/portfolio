@@ -1,0 +1,7 @@
+services:
+  php:
+    environment:
+      PHP_OPCACHE_REVALIDATE_FREQ: "2"
+      PHP_OPCACHE_VALIDATE_TIMESTAMPS: "1"
+    extra_hosts:
+      - host.docker.internal:host-gateway

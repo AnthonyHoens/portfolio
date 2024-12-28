@@ -1,0 +1,31 @@
+services:
+  php:
+    build:
+      context: .
+      dockerfile: docker/php/Dockerfile
+    user: "www-data:www-data"
+    volumes:
+      - ./src/bedrock:/var/www/html
+      - ./docker/services/apache/etc/apache2/sites-available/000-default.conf:/etc/apache2/sites-available/000-default.conf:ro
+    ports:
+      - "80:80"
+    networks:
+      - php-network
+
+  db:
+    image: mariadb:10.4.17
+    ports:
+      - "3300:3306"
+    environment:
+      - MYSQL_ROOT_PASSWORD=root
+      - MYSQL_DATABASE=portfolio
+      - MYSQL_USER=portfolio
+      - MYSQL_PASSWORD=password
+    volumes:
+      - ./db:/var/lib/mysql:delegated
+    networks:
+      - php-network
+
+networks:
+  php-network:
+    driver: bridge

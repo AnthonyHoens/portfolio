@@ -1,0 +1,27 @@
+{
+  "name": "portfolio",
+  "version": "1.0.0",
+  "description": "Ce projet est un projet d'école visant à réaliser un site internet de nous même pour voir nos compétences tant au niveau design qu'au niveau du développement.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AnthonyHoens/portfolio.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AnthonyHoens/portfolio/issues"
+  },
+  "homepage": "https://github.com/AnthonyHoens/portfolio#readme",
+  "devDependencies": {
+    "laravel-mix": "^6.0.49",
+    "resolve-url-loader": "^5.0.0",
+    "sass": "^1.83.0",
+    "sass-loader": "^12.6.0",
+    "webpack-cli": "^6.0.1"
+  }
+}

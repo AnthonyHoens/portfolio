@@ -1,16 +1,20 @@
-/*
+db
+.idea
 
-!.gitignore
-!package.json
-!/design-utility
+# Installation folder
+src/bedrock/web/wp
 
+# Languages Folder
+src/bedrock/web/app/languages/*
+!src/bedrock/web/app/languages/.gitkeep
 
+# Package Installation
+src/bedrock/vendor
+src/bedrock/node_modules
 
-!/wp-content
-/wp-content/*
-!/wp-content/themes
-/wp-content/themes/*
-!/wp-content/themes/portfolio
-/wp-content/themes/portfolio/public/*
+# Installed Package
+src/bedrock/web/app/plugins/advanced-custom-fields
 
-!README.md
+# environment files
+docker-compose.override.yml
+src/bedrock/.env
