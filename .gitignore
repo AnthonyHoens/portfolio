@@ -12,9 +12,6 @@ src/bedrock/web/app/languages/*
 src/bedrock/vendor
 src/bedrock/node_modules
 
-# Installed Package
-src/bedrock/web/app/plugins/advanced-custom-fields
-
 # environment files
 docker-compose.override.yml
 src/bedrock/.env

@@ -23,5 +23,8 @@ web/.htaccess
 # Composer
 /vendor
 
+# Plugins
+!web/app/plugins/contact-form-7
+
 # WP-CLI
 wp-cli.local.yml
