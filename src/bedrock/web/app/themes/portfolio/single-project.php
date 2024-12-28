@@ -11,7 +11,7 @@
         <div class="single_project__background_img">
             <div class="single_project__information">
                 <h2 class="single_project__title" aria-level="2" role="heading">
-                    <?php the_title(); ?>
+                    <?= esc_html(get_the_title()); ?>
                 </h2>
                 <a href="mailto:anthony-hoens@hotmail.com" class="single_project__link">
                     <span></span>
@@ -20,13 +20,12 @@
             </div>
 
             <div class="single_project__site_link">
-                <a href="<?php the_field('link'); ?>" class="single_project__link" target="_blank">
+                <a href="<?= esc_url(get_field('link')); ?>" class="single_project__link" target="_blank">
                     <span></span>
-                    Lien vers le site
+                    <?= esc_html__('Link to the project website', THEME_TEXT_DOMAIN) ?>
                 </a>
             </div>
         </div>
-
 
         <section class="single_project__support">
             <h3 role="heading" aria-level="3" class="sro">

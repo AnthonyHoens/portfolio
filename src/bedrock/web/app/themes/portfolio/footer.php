@@ -1,7 +1,7 @@
         <footer class="footer">
             <nav role="navigation" class="footer__nav nav">
                 <h2 class="nav__title sro" aria-level="2" role="heading">
-                    Seconde navigation principale
+                    <?= esc_html__('Main Navigation', THEME_TEXT_DOMAIN); ?>
                 </h2>
                 <ul class="nav__container">
                     <?php foreach (dw_menu('main') as $link): ?>
@@ -15,11 +15,13 @@
             </nav>
 
             <small class="footer__copyright">
-                &copy;&nbsp;Anthony Hoens
+                &copy;&nbsp;<?= esc_html__('All rights reserved.', THEME_TEXT_DOMAIN) ?>
             </small>
 
             <div class="footer__contact">
-                <a href="mailto:anthony-hoens@hotmail.com">Contactez-moi</a>
+                <a href="<?= esc_url(sprintf('mailto:%s', get_option('new_admin_email'))) ?>">
+                    <?= esc_html__('Get in touch', THEME_TEXT_DOMAIN) ?>
+                </a>
             </div>
         </footer>
 
@@ -27,7 +29,6 @@
 
         <?php if (is_front_page()): ?>
             <script src="<?= dw_asset('js/app.js') ?>"></script>
-            <script src="<?= dw_asset('js/lightEffect.js') ?>"></script>
         <?php endif; ?>
 
         <?php wp_footer(); ?>

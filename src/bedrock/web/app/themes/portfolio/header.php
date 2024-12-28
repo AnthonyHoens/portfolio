@@ -5,7 +5,7 @@
         <meta name="viewport"
               content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <title><?= is_front_page() ? 'Anthony Hoens | Portfolio du jeune étudiant passionné par le web!' : wp_title('Anthony Hoens |') ?></title>
+        <title><?= is_front_page() ? 'Anthony Hoens | Portfolio' : wp_title('Anthony Hoens |') ?></title>
 
         <link rel="stylesheet" href="<?= dw_asset('/css/theme.css'); ?>">
 
@@ -15,11 +15,11 @@
 
     <header class="header">
         <h1 aria-level="1" role="heading" class="header__title">
-            <a href="/#">Anthony Hoens</a>
+            <a href="<?= is_front_page() ? '#' : esc_url(get_home_url()) ?>"><?= esc_html('Anthony Hoens') ?></a>
         </h1>
         <nav role="navigation" class="header__nav nav">
             <h2 class="sro nav__title" aria-level="2" role="heading">
-                Navigation principale
+                <?= esc_html__('Main Navigation', THEME_TEXT_DOMAIN) ?>
             </h2>
             <ul class="nav__ul ul">
                 <?php foreach (dw_menu('main') as $link): ?>

@@ -12,8 +12,38 @@
 msgid "Some of my projects"
 msgstr ""
 
+msgid "Learn more"
+msgstr ""
+
 msgid "Learn more about %s"
 msgstr ""
 
 msgid "We haven't found a project yet."
+msgstr ""
+
+msgid "Link to the project website"
+msgstr ""
+
+msgid "View the project"
+msgstr ""
+
+msgid "About"
+msgstr ""
+
+msgid "Full-stack developer"
+msgstr ""
+
+msgid "Get in touch"
+msgstr ""
+
+msgid "Main Navigation"
+msgstr ""
+
+msgid "All rights reserved."
+msgstr ""
+
+msgid "Close contact form"
+msgstr ""
+
+msgid "Anthony Hoens's picture"
 msgstr ""
