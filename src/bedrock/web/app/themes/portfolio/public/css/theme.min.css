@@ -227,7 +227,22 @@ p {
   left: 0;
   right: 0;
   font-family: "Inter", sans-serif;
-  background-color: rgba(0, 0, 0, 0.3);
+  background-color: #272727;
+}
+.header--light {
+  background: #fff;
+  background: linear-gradient(180deg, white 0%, white 30%, rgba(255, 255, 255, 0) 100%);
+}
+.header--light .main-nav a {
+  color: #000;
+}
+.header--light .main-nav a.nav__active {
+  color: #000;
+  border-bottom: 1px solid #000;
+}
+.header--light .main-nav a:not(.nav__active):not(.social):hover, .header--light .main-nav a:not(.nav__active):not(.social):focus {
+  color: #000;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.6);
 }
 .header .container {
   display: flex;
@@ -1642,16 +1657,16 @@ body {
        column-gap: 3rem;
   row-gap: 1.5rem;
 }
-.main-nav ul a {
+.main-nav a {
   font-size: clamp(0.9375rem, 0.8693rem + 0.3409vw, 1.125rem);
   text-decoration: none;
   color: #fff;
 }
-.main-nav ul a.nav__active {
+.main-nav a.nav__active {
   color: #fff;
   border-bottom: 1px solid #fff;
 }
-.main-nav ul a:not(.nav__active):not(.social):hover, .main-nav ul a:not(.nav__active):not(.social):focus {
+.main-nav a:not(.nav__active):not(.social):hover, .main-nav a:not(.nav__active):not(.social):focus {
   color: #fff;
   border-bottom: 1px solid rgba(255, 255, 255, 0.6);
 }
@@ -1715,7 +1730,7 @@ body {
 
 .philosophy {
   background-color: #E9E9E9;
-  padding: 4rem;
+  padding: 4rem 2rem;
   text-align: center;
 }
 .philosophy blockquote {

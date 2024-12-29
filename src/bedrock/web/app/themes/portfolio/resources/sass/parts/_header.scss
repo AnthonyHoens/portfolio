@@ -7,7 +7,30 @@
   left: 0;
   right: 0;
   font-family: $main-font-family;
-  background-color: $color-dark-transparent-300;
+  background-color: $color-grey-500;
+
+  &--light {
+    background: $color-light;
+    background: linear-gradient(180deg, rgba($color-light, 1) 0%, rgba($color-light, 1) 30%, rgba($color-light, 0) 100%);
+
+    .main-nav {
+      a {
+        color: $color-dark;
+
+        &.nav__active {
+          color: $color-dark;
+          border-bottom: 1px solid $color-dark;
+        }
+
+        &:not(.nav__active):not(.social) {
+          &:hover, &:focus {
+            color: $color-dark;
+            border-bottom: 1px solid $color-dark-transparent-600;
+          }
+        }
+      }
+    }
+  }
 
   .container {
     display: flex;

@@ -1,3 +1,12 @@
+<?php
+/**
+ * @var array $args
+ * @var bool $lightMode
+ */
+
+$lightMode = $args['lightMode'] ?? false;
+?>
+
 <!doctype html>
 <html lang="<?= get_locale() ?>">
     <head>
@@ -18,11 +27,15 @@
     </head>
     <body>
 
-    <header class="header">
+    <header class="header <?= $lightMode ? 'header--light' : '' ?>">
         <div class="container">
             <h1 aria-level="1" role="heading" class="logo mb-0">
                 <a href="<?= is_front_page() ? '#' : esc_url(get_home_url()) ?>">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="70" height="39"><g fill="#FFF" fill-rule="evenodd"><path fill-rule="nonzero" d="M22.786 37.416 18.88 25.652H8.291L4.172 37.416h4.012v1.035H0v-1.035h2.514L16.154 0h4.385l13.48 37.416h2.46v1.035h-17.49v-1.035h3.797ZM13.8 10.185 8.772 24.454h9.681L13.8 10.184Z"/><path fill-rule="nonzero" d="M31.549 0h16.969v1.044h-3.155v23.23h10.823V1.044h-3.209V0H70v1.044h-3.209v36.363H70v1.044H52.977v-1.044h3.209V25.702H45.363v11.705h3.155v1.044H31.549v-1.044h3.209V1.044h-3.209z"/><path d="M7.887 24.648h48.31v1.972H7.887z"/></g></svg>
+                    <?php if($lightMode): ?>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="70" height="39"><g fill="#272727" fill-rule="evenodd"><path fill-rule="nonzero" d="m22.813 37.513-3.91-11.794H8.3L4.177 37.513h4.016v1.038H0v-1.038h2.517L16.172 0h4.392l13.494 37.513h2.464v1.038H19.01v-1.038h3.802Zm-8.997-27.302L8.782 24.517h9.693l-4.659-14.306Z"/><path fill-rule="nonzero" d="M31.449 0h17.013v1.046h-3.163v23.291H56.15V1.046h-3.217V0H70v1.046h-3.217v36.458H70v1.047H52.933v-1.047h3.217V25.769H45.299v11.735h3.163v1.047H31.449v-1.047h3.217V1.046h-3.217z"/><path d="M8.116 24.348h48.696v2.029H8.116z"/></g></svg>
+                    <?php else: ?>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="70" height="39"><g fill="#FFF" fill-rule="evenodd"><path fill-rule="nonzero" d="M22.786 37.416 18.88 25.652H8.291L4.172 37.416h4.012v1.035H0v-1.035h2.514L16.154 0h4.385l13.48 37.416h2.46v1.035h-17.49v-1.035h3.797ZM13.8 10.185 8.772 24.454h9.681L13.8 10.184Z"/><path fill-rule="nonzero" d="M31.549 0h16.969v1.044h-3.155v23.23h10.823V1.044h-3.209V0H70v1.044h-3.209v36.363H70v1.044H52.977v-1.044h3.209V25.702H45.363v11.705h3.155v1.044H31.549v-1.044h3.209V1.044h-3.209z"/><path d="M7.887 24.648h48.31v1.972H7.887z"/></g></svg>
+                    <?php endif; ?>
                 </a>
             </h1>
             <nav role="navigation" class="main-nav">

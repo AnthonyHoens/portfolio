@@ -7,22 +7,22 @@
     align-items: flex-end;
     column-gap: 3rem;
     row-gap: 1.5rem;
+  }
 
-    a {
-      font-size: $font-size-p;
-      text-decoration: none;
+  a {
+    font-size: $font-size-p;
+    text-decoration: none;
+    color: $color-light;
+
+    &.nav__active {
       color: $color-light;
+      border-bottom: 1px solid $color-light;
+    }
 
-      &.nav__active {
+    &:not(.nav__active):not(.social) {
+      &:hover, &:focus {
         color: $color-light;
-        border-bottom: 1px solid $color-light;
-      }
-
-      &:not(.nav__active):not(.social) {
-        &:hover, &:focus {
-          color: $color-light;
-          border-bottom: 1px solid $color-light-transparent-600;
-        }
+        border-bottom: 1px solid $color-light-transparent-600;
       }
     }
   }

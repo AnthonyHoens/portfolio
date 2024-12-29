@@ -1,4 +1,4 @@
-<?php get_header(); ?>
+<?php get_header(null, ['lightMode' => true]); ?>
 
 <main class="main">
     <section class="about about--page grid container">
