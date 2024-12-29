@@ -91,7 +91,7 @@
     ?>
     <section class="projects-list--slider">
         <div class="container arrows__container">
-            <h2 aria-level="2" role="heading" class="title h3">
+            <h2 aria-level="2" role="heading" class="title h4">
                 <?= esc_html__('Some of my projects', THEME_TEXT_DOMAIN) ?>
             </h2>
 
