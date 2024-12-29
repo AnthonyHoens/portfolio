@@ -1,5 +1,7 @@
 {
     "/js/app.js": "/js/app.js",
     "/js/contact.js": "/js/contact.js",
-    "/css/theme.css": "/css/theme.css"
+    "/js/slider.js": "/js/slider.js",
+    "/css/theme.css": "/css/theme.css",
+    "/css/theme.min.css": "/css/theme.min.css"
 }

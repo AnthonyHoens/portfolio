@@ -1,7 +1,7 @@
 <?php get_header(); ?>
 
 <main class="main">
-    <section class="about about--page grid">
+    <section class="about about--page grid container">
         <span class="grid__line grid__line_1"></span>
         <span class="grid__line grid__line_2"></span>
         <span class="grid__line grid__line_3"></span>
@@ -65,34 +65,31 @@
         ]);
     ?>
     <section class="projects-list--slider">
-        <h2 aria-level="2" role="heading" class="title h3">
-            <?= esc_html__('Some of my projects', THEME_TEXT_DOMAIN) ?>
-        </h2>
-        <?php if ($projects->have_posts()): while($projects->have_posts()): $projects->the_post(); ?>
-            <section class="some_projects__project project">
-                <div class="project__info_container">
-                    <h3 class="project__title" aria-level="3" role="heading">
-                        <a href="<?= esc_url(get_permalink()); ?>">
-                            <?= esc_html(get_the_title()); ?>
+        <div class="container">
+            <h2 aria-level="2" role="heading" class="title h3">
+                <?= esc_html__('Some of my projects', THEME_TEXT_DOMAIN) ?>
+            </h2>
+        </div>
+        <div class="container js-projects-slider">
+            <?php if ($projects->have_posts()): while($projects->have_posts()): $projects->the_post(); ?>
+                <section class="project">
+                    <div class="project__img_container">
+                        <a href="<?= esc_url(get_permalink()); ?>" class="stretched-link" title="<?= esc_html_f('Learn more about %s', THEME_TEXT_DOMAIN, esc_html(get_the_title())) ?>">
+                            <img class="img" <?= dw_the_img_attributes(get_field('cover_img'), ['thumbnail','medium', 'large']) ?>>
+                            <?php if(!empty(get_field('logo'))): ?>
+                                <img class="logo" <?= dw_the_img_attributes(get_field('logo'), ['thumbnail','medium', 'large']) ?>>
+                            <?php endif; ?>
                         </a>
-                    </h3>
+                    </div>
+                </section>
+            <?php endwhile; else: ?>
+                <div>
+                    <p class="project__no_project">
+                        <?= esc_html__("We haven't found a project yet.", THEME_TEXT_DOMAIN) ?>
+                    </p>
                 </div>
-                <div class="project__img_container">
-                    <a href="<?= esc_url(get_permalink()); ?>">
-                        <span class="sro">
-                            <?= esc_html_f('Learn more about %s', THEME_TEXT_DOMAIN, esc_html(get_the_title())) ?>
-                        </span>
-                    </a>
-                    <img <?= dw_the_img_attributes(get_field('cover_img'), ['thumbnail','medium', 'large']) ?>>
-                </div>
-            </section>
-        <?php endwhile; else: ?>
-            <div>
-                <p class="project__no_project">
-                    <?= esc_html__("We haven't found a project yet.", THEME_TEXT_DOMAIN) ?>
-                </p>
-            </div>
-        <?php endif; ?>
+            <?php endif; ?>
+        </div>
     </section>
     <?php include 'contact.php'; ?>
 </main>

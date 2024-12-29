@@ -87,15 +87,17 @@
                         <span class="angle angle__top_left"></span>
                         <span class="angle angle__top_right"></span>
 
-                        <?php if(!empty(get_field('cover_img'))): ?>
-                            <img class="img" <?= dw_the_img_attributes(get_field('cover_img'), ['thumbnail','medium', 'large']) ?>>
-                        <?php endif; ?>
-                        <?php if(!empty(get_field('logo'))): ?>
-                            <img class="img" <?= dw_the_img_attributes(get_field('logo'), ['thumbnail','medium', 'large']) ?>>
-                        <?php endif; ?>
+                        <a href="<?= esc_url(get_permalink()) ?>" title="<?= esc_html_f('Learn more about %s', THEME_TEXT_DOMAIN, esc_html(get_the_title())) ?>" class="stretched-link">
+                            <?php if(!empty(get_field('cover_img'))): ?>
+                                <img class="img" <?= dw_the_img_attributes(get_field('cover_img'), ['thumbnail','medium', 'large']) ?>>
+                            <?php endif; ?>
+                            <?php if(!empty(get_field('logo'))): ?>
+                                <img class="logo" <?= dw_the_img_attributes(get_field('logo'), ['thumbnail','medium', 'large']) ?>>
+                            <?php endif; ?>
+                        </a>
                     </div>
                     <div class="project__text_container">
-                        <h3 class="title h2" aria-level="3" role="heading">
+                        <h3 class="title h3" aria-level="3" role="heading">
                             <?= esc_html(get_the_title()); ?>
                         </h3>
                         <?php if(!empty(get_field('subtitle'))): ?>

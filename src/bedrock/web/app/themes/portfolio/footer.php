@@ -21,7 +21,8 @@
             </div>
         </footer>
 
-        <script src="<?= dw_asset('js/contact.js') ?>"></script>
+        <script src="<?= dw_asset('/lib/glider/js/glider.min.js') ?>"></script>
+        <script src="<?= dw_asset('/js/slider.js') ?>"></script>
 
         <?php if (is_front_page()): ?>
             <script src="<?= dw_asset('js/app.js') ?>"></script>

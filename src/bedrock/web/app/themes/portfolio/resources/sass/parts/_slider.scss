@@ -1,0 +1,13 @@
+.glider {
+  &-track {
+    gap: 1rem;
+  }
+}
+
+@media screen and (min-width: $screen-lg) {
+  .glider {
+    &-track {
+      gap: 2rem;
+    }
+  }
+}

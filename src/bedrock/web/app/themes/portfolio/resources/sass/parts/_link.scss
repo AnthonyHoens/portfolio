@@ -43,3 +43,12 @@
 .btn--large {
   padding: 1em 7em;
 }
+
+.stretched-link {
+  &:before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    z-index: 100;
+  }
+}
