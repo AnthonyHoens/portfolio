@@ -46,9 +46,9 @@
                                     <?php endforeach; ?>
                                 </div>
                             <?php endif; ?>
-                            <?php if(!empty(get_field('description'))): ?>
+                            <?php if(!empty(get_field('short_description'))): ?>
                                 <p class="text description">
-                                    <?= wp_kses(get_field('description'), ['b' => [], 'strong' => [], 'em' => [], 'i' => []]); ?>
+                                    <?= wp_kses(get_field('short_description'), ['b' => [], 'strong' => [], 'em' => [], 'i' => []]); ?>
                                 </p>
                             <?php endif; ?>
                         </div>

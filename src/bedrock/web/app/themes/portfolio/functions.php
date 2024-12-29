@@ -229,32 +229,11 @@ add_action('acf/include_fields', function () {
     }
 
     acf_add_local_field_group(field_group: array(
-        'key' => 'group_676eca9631163',
+        'key' => 'about_page',
         'title' => 'About Page',
         'fields' => array(
             array(
-                'key' => 'field_676eca967ed7a',
-                'label' => 'Hello',
-                'name' => 'hello',
-                'aria-label' => '',
-                'type' => 'text',
-                'instructions' => '',
-                'required' => 0,
-                'conditional_logic' => 0,
-                'wrapper' => array(
-                    'width' => '',
-                    'class' => '',
-                    'id' => '',
-                ),
-                'default_value' => '',
-                'maxlength' => '',
-                'allow_in_bindings' => 0,
-                'placeholder' => '',
-                'prepend' => '',
-                'append' => '',
-            ),
-            array(
-                'key' => 'field_676ecab77ed7b',
+                'key' => 'about_text',
                 'label' => 'About text',
                 'name' => 'about_text',
                 'aria-label' => '',
@@ -275,7 +254,7 @@ add_action('acf/include_fields', function () {
                 'append' => '',
             ),
             array(
-                'key' => 'field_676ecb0d7ed7c',
+                'key' => 'about_img',
                 'label' => 'About Image',
                 'name' => 'about_img',
                 'aria-label' => '',
@@ -301,7 +280,7 @@ add_action('acf/include_fields', function () {
                 'preview_size' => 'medium',
             ),
             array(
-                'key' => 'field_676ecb2c7ed7d',
+                'key' => 'passion_text',
                 'label' => 'Passion Text',
                 'name' => 'passion_text',
                 'aria-label' => '',
@@ -322,7 +301,7 @@ add_action('acf/include_fields', function () {
                 'append' => '',
             ),
             array(
-                'key' => 'field_676ecb747ed80',
+                'key' => 'passion_img',
                 'label' => 'Passion Image',
                 'name' => 'passion_img',
                 'aria-label' => '',
@@ -369,17 +348,17 @@ add_action('acf/include_fields', function () {
     ));
 
     acf_add_local_field_group(array(
-        'key' => 'group_676ecc13a1c96',
+        'key' => 'single_projects',
         'title' => 'Single Projects',
         'fields' => array(
             array(
-                'key' => 'field_676f2a22aa544',
+                'key' => 'cover_img',
                 'label' => 'Cover Image',
                 'name' => 'cover_img',
                 'aria-label' => '',
                 'type' => 'image',
                 'instructions' => '',
-                'required' => 0,
+                'required' => 1,
                 'conditional_logic' => 0,
                 'wrapper' => array(
                     'width' => '',
@@ -399,7 +378,7 @@ add_action('acf/include_fields', function () {
                 'preview_size' => 'medium',
             ),
             array(
-                'key' => 'field_676ecc5c003fe',
+                'key' => 'subtitle',
                 'label' => 'SubTitle',
                 'name' => 'subtitle',
                 'aria-label' => '',
@@ -420,7 +399,7 @@ add_action('acf/include_fields', function () {
                 'append' => '',
             ),
             array(
-                'key' => 'field_676eccdf00404',
+                'key' => 'description',
                 'label' => 'Description',
                 'name' => 'description',
                 'aria-label' => '',
@@ -441,7 +420,7 @@ add_action('acf/include_fields', function () {
                 'delay' => 0,
             ),
             array(
-                'key' => 'field_676eccsfi0404',
+                'key' => 'short_description',
                 'label' => 'Short Description',
                 'name' => 'short_description',
                 'aria-label' => '',
@@ -462,7 +441,7 @@ add_action('acf/include_fields', function () {
                 'delay' => 0,
             ),
             array(
-                'key' => 'field_679acc9d00402',
+                'key' => 'description_image',
                 'label' => 'Description Image',
                 'name' => 'description_image',
                 'aria-label' => '',
@@ -488,7 +467,7 @@ add_action('acf/include_fields', function () {
                 'preview_size' => 'medium',
             ),
             array(
-                'key' => 'field_676ecc3b003fa',
+                'key' => 'logo',
                 'label' => 'Project Logo',
                 'name' => 'logo',
                 'aria-label' => '',
@@ -514,7 +493,7 @@ add_action('acf/include_fields', function () {
                 'preview_size' => 'medium',
             ),
             array(
-                'key' => 'field_676ecc2f003fd',
+                'key' => 'link',
                 'label' => 'Link',
                 'name' => 'link',
                 'aria-label' => '',
@@ -531,7 +510,7 @@ add_action('acf/include_fields', function () {
                 'allow_in_bindings' => 0,
             ),
             array(
-                'key' => 'field_676ecc9d00402',
+                'key' => 'design_img_computer',
                 'label' => 'Design Image Computer',
                 'name' => 'design_img_computer',
                 'aria-label' => '',
@@ -557,7 +536,7 @@ add_action('acf/include_fields', function () {
                 'preview_size' => 'medium',
             ),
             array(
-                'key' => 'field_676eccb800403',
+                'key' => 'design_img_phone',
                 'label' => 'Design Image Phone',
                 'name' => 'design_img_phone',
                 'aria-label' => '',
