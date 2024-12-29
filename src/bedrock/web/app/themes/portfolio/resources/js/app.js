@@ -1,6 +1,5 @@
 import Rect from './parts/Rect';
 
-
 const animation = {
     canvas: null,
     ctx : null,
@@ -63,4 +62,8 @@ const animation = {
 
 }
 
-animation.init();
+const animationDOM = document.querySelector('#animation');
+
+if(typeof(animationDOM) != 'undefined' && animationDOM != null) {
+    animation.init();
+}

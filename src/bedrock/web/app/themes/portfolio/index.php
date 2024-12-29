@@ -1,7 +1,8 @@
 <?php get_header(); ?>
 
     <main class="main">
-        <section class="hero hero--with-bg">
+        <section class="hero">
+            <canvas class="hero__canvas" id="animation"></canvas>
             <h1 class="title text-center mb-0" aria-level="1" role="heading">
                 <?= esc_html__('My projects', THEME_TEXT_DOMAIN) ?>
             </h1>

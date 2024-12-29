@@ -59,7 +59,10 @@ var animation = {
     });
   }
 };
-animation.init();
+var animationDOM = document.querySelector('#animation');
+if (typeof animationDOM != 'undefined' && animationDOM != null) {
+  animation.init();
+}
 
 /***/ }),
 
