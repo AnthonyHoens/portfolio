@@ -1,30 +1,15 @@
-<?php
-/**
- * The template for displaying the 404 template in the Twenty Twenty theme.
- *
- * @package WordPress
- * @subpackage Twenty_Twenty
- * @since Twenty Twenty 1.0
- */
-?>
-
 <?php get_header(); ?>
 
-<main id="site-content" role="main">
-	<div class="section-inner thin error404-content">
-		<h1 class="entry-title"><?php _e( 'Page Not Found', 'twentytwenty' ); ?></h1>
-
-		<div class="intro-text"><p><?php _e( 'The page you were looking for could not be found. It might have been removed, renamed, or did not exist in the first place.', 'twentytwenty' ); ?></p></div>
-
-		<?php
-		get_search_form(
-			array(
-				'label' => __( '404 not found', 'twentytwenty' ),
-			)
-		);
-		?>
-
-	</div>
+<main class="main">
+    <section class="hero">
+        <canvas class="hero__canvas" id="animation"></canvas>
+        <h1 class="title text-center mb-0" aria-level="1" role="heading">
+            <?= esc_html__("It seems you're lost!", THEME_TEXT_DOMAIN) ?>
+        </h1>
+        <a href="<?= esc_url(home_url()) ?>" class="btn btn--primary" itemprop="url">
+            <?= esc_html__('Return Homepage', THEME_TEXT_DOMAIN) ?>
+        </a>
+    </section>
 </main>
 
 <?php get_footer(); ?>

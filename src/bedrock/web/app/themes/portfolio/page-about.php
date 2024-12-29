@@ -66,7 +66,7 @@
     ?>
     <section class="projects-list--slider">
         <div class="container">
-            <h2 aria-level="2" role="heading" class="title h3">
+            <h2 aria-level="2" role="heading" class="title h4">
                 <?= esc_html__('Some of my projects', THEME_TEXT_DOMAIN) ?>
             </h2>
         </div>
@@ -91,7 +91,14 @@
             <?php endif; ?>
         </div>
     </section>
-    <?php include 'contact.php'; ?>
+    <section class="contact--me">
+        <h2 class="h5">
+            <?= esc_html__("Let's talk about your project ?", THEME_TEXT_DOMAIN) ?>
+        </h2>
+        <a href="<?= esc_url(sprintf('mailto:%s', get_option('new_admin_email'))) ?>" class="btn btn--secondary" itemprop="url">
+            <?= esc_html__('Get in touch', THEME_TEXT_DOMAIN) ?>
+        </a>
+    </section>
 </main>
 
 <?php get_footer(); ?>

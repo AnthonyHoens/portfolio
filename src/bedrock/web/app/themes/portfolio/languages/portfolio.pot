@@ -80,3 +80,15 @@ msgstr ""
 
 msgid "There is only one way to fail: to give up before succeeding."
 msgstr ""
+
+msgid "The project"
+msgstr ""
+
+msgid "Project image inside macbook"
+msgstr ""
+
+msgid "Project image inside iphone"
+msgstr ""
+
+msgid "Let's talk about your project ?"
+msgstr ""
