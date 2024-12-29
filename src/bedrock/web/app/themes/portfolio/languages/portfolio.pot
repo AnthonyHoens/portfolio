@@ -72,7 +72,7 @@ msgstr ""
 msgid "Hello,"
 msgstr ""
 
-msgid "I am Anthony Hoens, a full-stack developer with 3 years of experience. I am passionate about my work and take pride in providing clear communication, collaborative work, and complete commitment."
+msgid "I am Anthony Hoens, a full-stack developer with 3 years of experience. Passionate about my work, I place great importance on smooth communication, constructive collaboration, and absolute commitment."
 msgstr ""
 
 msgid "Specialized in PHP (Laravel, WordPress, Magento) and front-end (React, jQuery, CSS), I develop scalable applications and dynamic interfaces, with a strong focus on website performance."
@@ -84,6 +84,9 @@ msgstr ""
 msgid "The project"
 msgstr ""
 
+msgid "My projects"
+msgstr ""
+
 msgid "Project image inside macbook"
 msgstr ""
 
@@ -91,4 +94,22 @@ msgid "Project image inside iphone"
 msgstr ""
 
 msgid "Let's talk about your project ?"
+msgstr ""
+
+msgid "Project owners"
+msgstr ""
+
+msgid "Project owner"
+msgstr ""
+
+msgid "Add a project owner"
+msgstr ""
+
+msgid "Add a new project owner"
+msgstr ""
+
+msgid "Modify a project owner"
+msgstr ""
+
+msgid "New project owner"
 msgstr ""

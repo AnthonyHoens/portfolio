@@ -57,5 +57,11 @@ $lightMode = $args['lightMode'] ?? false;
                     </li>
                 </ul>
             </nav>
+            <a href="#" title="Ouvrir et fermer le menu" class="menu--burger">
+                <div>
+                    <span></span>
+                    <span></span>
+                </div>
+            </a>
         </div>
     </header>

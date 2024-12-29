@@ -2,6 +2,7 @@
     "/js/app.js": "/js/app.js",
     "/js/contact.js": "/js/contact.js",
     "/js/slider.js": "/js/slider.js",
+    "/js/burger.js": "/js/burger.js",
     "/css/theme.css": "/css/theme.css",
     "/css/theme.min.css": "/css/theme.min.css"
 }

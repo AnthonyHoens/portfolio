@@ -35,7 +35,7 @@
                 <?= esc_html__('Hello,', THEME_TEXT_DOMAIN) ?>
             </h2>
             <p class="text">
-                <?= esc_html__('I am Anthony Hoens, a full-stack developer with 3 years of experience. I am passionate about my work and take pride in providing clear communication, collaborative work, and complete commitment.', THEME_TEXT_DOMAIN) ?>
+                <?= esc_html__('I am Anthony Hoens, a full-stack developer with 3 years of experience. Passionate about my work, I place great importance on smooth communication, constructive collaboration, and absolute commitment.', THEME_TEXT_DOMAIN) ?>
             </p>
             <p class="text">
                 <?= esc_html__('Specialized in PHP (Laravel, WordPress, Magento) and front-end (React, jQuery, CSS), I develop scalable applications and dynamic interfaces, with a strong focus on website performance.', THEME_TEXT_DOMAIN) ?>

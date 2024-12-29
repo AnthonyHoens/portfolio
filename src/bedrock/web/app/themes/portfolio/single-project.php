@@ -58,7 +58,7 @@
     </section>
 
     <?php if(!empty(get_field('design_img_computer')) || !empty(get_field('design_img_phone'))): ?>
-        <div class="project__preview">
+        <div class="project__preview container">
             <?php if(!empty(get_field('design_img_computer'))): ?>
                 <div>
                     <img class="macbook" src="<?= esc_url(dw_asset('/images/macbook.png')) ?>"

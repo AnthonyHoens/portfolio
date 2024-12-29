@@ -116,13 +116,13 @@ function dw_custom_post_type(): void
         'project-owner',
         'project',
         [
-            'label' => esc_html__('Projects realised by', THEME_TEXT_DOMAIN),
+            'label' => esc_html__('Project owners', THEME_TEXT_DOMAIN),
             'labels' => [
-                'singular_name' => esc_html__('Project realised by', THEME_TEXT_DOMAIN),
-                'add_new' => esc_html__('Add a project realised by', THEME_TEXT_DOMAIN),
-                'add_new_item' => esc_html__('Add a new project realised by', THEME_TEXT_DOMAIN),
-                'edit_item' => esc_html__('Modify a project realised by', THEME_TEXT_DOMAIN),
-                'new_item' => esc_html__('New project realised by', THEME_TEXT_DOMAIN),
+                'singular_name' => esc_html__('Project owner', THEME_TEXT_DOMAIN),
+                'add_new' => esc_html__('Add a project owner', THEME_TEXT_DOMAIN),
+                'add_new_item' => esc_html__('Add a new project owner', THEME_TEXT_DOMAIN),
+                'edit_item' => esc_html__('Modify a project owner', THEME_TEXT_DOMAIN),
+                'new_item' => esc_html__('New project owner', THEME_TEXT_DOMAIN),
             ],
             'has_archive' => true,
         ]

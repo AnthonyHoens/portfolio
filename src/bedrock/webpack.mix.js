@@ -13,6 +13,9 @@ mix.js(
 ).js(
     resourceDir + '/js/slider.js',
     '/js/slider.js'
+).js(
+    resourceDir + '/js/burger.js',
+    '/js/burger.js'
 ).sass(
     resourceDir + '/sass/theme.scss',
     '/css/theme.css'

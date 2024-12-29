@@ -23,6 +23,7 @@
 
         <script src="<?= dw_asset('/lib/glider/js/glider.min.js') ?>"></script>
         <script src="<?= dw_asset('/js/slider.js') ?>"></script>
+        <script src="<?= dw_asset('/js/burger.js') ?>"></script>
 
         <?php if (is_front_page() || is_404()): ?>
             <script src="<?= dw_asset('js/app.js') ?>"></script>

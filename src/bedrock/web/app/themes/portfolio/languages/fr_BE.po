@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2024-12-29 04:31+0100\n"
+"PO-Revision-Date: 2024-12-29 21:17+0100\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: fr_BE\n"
@@ -76,13 +76,13 @@ msgid "Hello,"
 msgstr "Bonjour,"
 
 msgid ""
-"I am Anthony Hoens, a full-stack developer with 3 years of experience. I am "
-"passionate about my work and take pride in providing clear communication, "
-"collaborative work, and complete commitment."
+"I am Anthony Hoens, a full-stack developer with 3 years of experience. "
+"Passionate about my work, I place great importance on smooth communication, "
+"constructive collaboration, and absolute commitment."
 msgstr ""
-"Je suis Anthony Hoens, développeur full-stack avec 3 ans d'expérience. Je "
-"suis passionné par mon métier et met un point d'honneur à offrir une "
-"communication claire, un travail collaboratif et un engagement total."
+"Je suis Anthony Hoens, développeur full-stack avec 3 ans d'expérience. "
+"Passionné par mon métier, j'accorde une importance particulière à une "
+"communication fluide, une collaboration constructive et un engagement absolu."
 
 msgid ""
 "Specialized in PHP (Laravel, WordPress, Magento) and front-end (React, "
@@ -96,3 +96,36 @@ msgstr ""
 msgid "There is only one way to fail: to give up before succeeding."
 msgstr ""
 "Il n'y a qu'une façon d'échouer, c'est d'abandonner avant d'avoir réussi."
+
+msgid "The project"
+msgstr "Le projet"
+
+msgid "My projects"
+msgstr "Mes projets"
+
+msgid "Project image inside macbook"
+msgstr "Image du projet à l'intérieur d'un macbook"
+
+msgid "Project image inside iphone"
+msgstr "Image du projet à l'intérieur d'un iphone"
+
+msgid "Let's talk about your project ?"
+msgstr "Parlons à propos de votre projet ?"
+
+msgid "Project owners"
+msgstr "Auteurs de Projets"
+
+msgid "Project owner"
+msgstr "Auteur de projet"
+
+msgid "Add a project owner"
+msgstr "Ajouter un auteur de projet"
+
+msgid "Add a new project owner"
+msgstr "Ajouter un nouveau auteur de projet"
+
+msgid "Modify a project owner"
+msgstr "Modifier un auteur de projet"
+
+msgid "New project owner"
+msgstr "Nouveau auteur de projet"
