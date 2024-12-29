@@ -1,7 +1,7 @@
 <?php get_header(); ?>
 
 <main class="main">
-    <section class="main__about main__special_about about grid">
+    <section class="about about--page grid">
         <span class="grid__line grid__line_1"></span>
         <span class="grid__line grid__line_2"></span>
         <span class="grid__line grid__line_3"></span>
@@ -19,51 +19,38 @@
             <?= esc_html(get_the_title()); ?>
         </h2>
 
-        <p class="about__special_title">
+        <p class="title h1">
             <?= esc_html__('Hello,', THEME_TEXT_DOMAIN); ?>
         </p>
 
         <?php if (!empty(get_field('about_text')) && !empty(get_field('about_img'))): ?>
-            <div class="about__wrap about__wrap_1 wrap">
-                <p class="wrap__text">
-                    <?= esc_html(get_field('about_text')); ?>
-                </p>
-                <div class="about__img_container wrap__img_container">
-                    <span class="about__span about__span_1"></span>
-                    <span class="about__span about__span_2"></span>
-                    <span class="about__span about__span_3"></span>
-                    <span class="about__span about__span_4"></span>
+            <div class="grid__wrapper grid__wrapper_1">
+                <div class="text wysiwyg">
+                    <?= wp_kses(get_field('about_text'), ['b' => [], 'strong' => [], 'em' => [], 'i' => [], 'p' => []]); ?>
+                </div>
+                <div class="about__img_container angle-container disable-hover">
+                    <span class="angle angle__top_left"></span>
+                    <span class="angle angle__top_right"></span>
+                    <span class="angle angle__bottom_left"></span>
+                    <span class="angle angle__bottom_right"></span>
+
                     <img <?= dw_the_img_attributes(get_field('about_img'), ['thumbnail','medium', 'large']) ?>  >
                 </div>
             </div>
         <?php endif; ?>
 
         <?php if (!empty(get_field('passion_text')) && !empty(get_field('passion_img'))): ?>
-            <div class="about__wrap about__wrap_2 wrap">
-                <p class="wrap__text">
-                    <?= esc_html(get_field('passion_text')); ?>
-                </p>
-                <div class="about__img_container wrap__img_container">
-                    <span class="about__span about__span_1"></span>
-                    <span class="about__span about__span_2"></span>
-                    <span class="about__span about__span_3"></span>
-                    <span class="about__span about__span_4"></span>
-                    <img <?= dw_the_img_attributes(get_field('passion_img'), ['thumbnail','medium', 'large']) ?>>
+            <div class="grid__wrapper grid__wrapper_2">
+                <div class="text wysiwyg">
+                    <?= wp_kses(get_field('passion_text'), ['b' => [], 'strong' => [], 'em' => [], 'i' => [], 'p' => []]); ?>
                 </div>
-            </div>
-        <?php endif; ?>
+                <div class="about__img_container angle-container disable-hover">
+                    <span class="angle angle__top_left"></span>
+                    <span class="angle angle__top_right"></span>
+                    <span class="angle angle__bottom_left"></span>
+                    <span class="angle angle__bottom_right"></span>
 
-        <?php if (!empty(get_field('sport_text')) && !empty(get_field('sport_img'))): ?>
-            <div class="about__wrap about__wrap_3 wrap">
-                <p class="wrap__text">
-                    <?= esc_html(get_field('sport_text')); ?>
-                </p>
-                <div class="about__img_container wrap__img_container">
-                    <span class="about__span about__span_1"></span>
-                    <span class="about__span about__span_2"></span>
-                    <span class="about__span about__span_3"></span>
-                    <span class="about__span about__span_4"></span>
-                    <img <?= dw_the_img_attributes(get_field('sport_img'), ['thumbnail','medium', 'large']) ?>>
+                    <img <?= dw_the_img_attributes(get_field('passion_img'), ['thumbnail','medium', 'large']) ?>>
                 </div>
             </div>
         <?php endif; ?>
@@ -77,8 +64,8 @@
             'order' => 'asc',
         ]);
     ?>
-    <section class="main__some_projects some_projects">
-        <h2 aria-level="2" role="heading" class="some_projects__title">
+    <section class="projects-list--slider">
+        <h2 aria-level="2" role="heading" class="title h3">
             <?= esc_html__('Some of my projects', THEME_TEXT_DOMAIN) ?>
         </h2>
         <?php if ($projects->have_posts()): while($projects->have_posts()): $projects->the_post(); ?>

@@ -22,7 +22,6 @@
   }
 
   &__title {
-    font-size: 1.999rem;
     color: white;
     margin-bottom: 2rem;
   }
@@ -235,7 +234,7 @@
   }
 }
 
-.project__list {
+.projects-list {
   .project {
     position: relative;
     color: $color-light;
@@ -273,10 +272,19 @@
       object-fit: cover;
     }
   }
+
+  &--slider {
+    background-color: $color-primary-transparent-300;
+    padding: 6rem 2rem;
+
+    .title {
+      color: $color-primary-500;
+    }
+  }
 }
 
 @media screen and (min-width: $screen-lg) {
-  .project__list {
+  .projects-list {
     .project {
       padding: 5rem 6rem;
 
@@ -302,7 +310,7 @@
 }
 
 @media screen and (min-width: $screen-xl) {
-  .project__list {
+  .projects-list {
     .project {
       .container {
         gap: 3rem;

@@ -10,7 +10,7 @@
             </a>
         </section>
 
-        <section class="main__projects project__list" id="projects">
+        <section class="projects-list" id="projects">
             <?php if (have_posts()) : while(have_posts()) : the_post(); ?>
                 <?php $terms = wp_get_post_terms(get_the_ID(), 'project-owner'); ?>
                 <section class="project">

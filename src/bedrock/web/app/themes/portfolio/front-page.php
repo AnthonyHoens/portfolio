@@ -64,7 +64,7 @@
         </div>
     </section>
 
-    <section class="main__projects project__list" id="projects">
+    <section class="projects-list" id="projects">
         <h2 class="title sro" aria-level="2" role="heading">
             <?= esc_html__('Some of my projects', THEME_TEXT_DOMAIN) ?>
         </h2>

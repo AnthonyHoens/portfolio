@@ -1,0 +1,16 @@
+.wysiwyg {
+  p {
+
+    &:not(:last-of-type) {
+      margin-bottom: 1em;
+    }
+  }
+}
+
+strong, b {
+  font-weight: bold;
+}
+
+em, i {
+  font-style: italic;
+}

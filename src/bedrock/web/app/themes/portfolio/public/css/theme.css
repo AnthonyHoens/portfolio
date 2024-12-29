@@ -804,7 +804,6 @@ body {
   color: rgba(27, 130, 132, 0.5);
 }
 .single_project__title {
-  font-size: 1.999rem;
   color: white;
   margin-bottom: 2rem;
 }
@@ -967,65 +966,72 @@ body {
   }
 }
 
-.project__list .project {
+.projects-list .project {
   position: relative;
   color: #fff;
   padding: 5rem 2rem;
 }
-.project__list .project:nth-child(even) {
+.projects-list .project:nth-child(even) {
   background-color: #272727;
 }
-.project__list .project:nth-child(even) .project__img_container {
+.projects-list .project:nth-child(even) .project__img_container {
   order: 2;
 }
-.project__list .project .title {
+.projects-list .project .title {
   margin-bottom: 0.1em;
 }
-.project__list .project .text {
+.projects-list .project .text {
   font-size: clamp(0.8333rem, 0.7955rem + 0.1894vw, 0.9375rem);
   color: rgba(255, 255, 255, 0.7);
 }
-.project__list .project:nth-child(odd) {
+.projects-list .project:nth-child(odd) {
   background-color: rgba(39, 39, 39, 0.8);
 }
-.project__list .project .container {
+.projects-list .project .container {
   display: flex;
   flex-direction: column;
   gap: 3rem 1.5rem;
 }
-.project__list .project img {
+.projects-list .project img {
   aspect-ratio: 10/6;
   -o-object-fit: cover;
      object-fit: cover;
 }
+.projects-list--slider {
+  background-color: rgba(27, 130, 132, 0.3);
+  padding: 6rem 2rem;
+}
+.projects-list--slider .title {
+  color: #1B8284;
+}
 
 @media screen and (min-width: 1024px) {
-  .project__list .project {
+  .projects-list .project {
     padding: 5rem 6rem;
   }
-  .project__list .project .container {
+  .projects-list .project .container {
     gap: 2rem;
     flex-direction: row;
     align-items: center;
   }
-  .project__list .project img {
+  .projects-list .project img {
     aspect-ratio: 10/5;
   }
-  .project__list .project__text_container {
+  .projects-list .project__text_container {
     flex: 2;
   }
-  .project__list .project__img_container {
+  .projects-list .project__img_container {
     flex: 3;
   }
 }
 @media screen and (min-width: 1280px) {
-  .project__list .project .container {
+  .projects-list .project .container {
     gap: 3rem;
   }
-  .project__list .project__text_container {
+  .projects-list .project__text_container {
     flex: 4;
   }
-  .project__list .project__img_container {
+  .projects-list .project__img_container {
     flex: 5;
   }
 }
@@ -1297,19 +1303,43 @@ body {
   margin-bottom: 4rem;
 }
 .about__img_container img {
+  aspect-ratio: 1;
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
 }
 .about .title {
-  font-family: "Inter", sans-serif;
   color: #000;
 }
 .about .text {
   margin-bottom: 1em;
   line-height: 1.7;
   color: rgba(0, 0, 0, 0.7);
+}
+.about--page .grid__line {
+  grid-row: 1/4;
+}
+.about--page .grid__wrapper {
+  display: grid;
+  grid-template-columns: subgrid;
+}
+.about--page .grid__wrapper .text {
+  grid-column: 1/5;
+  margin-bottom: 2rem;
+}
+.about--page .grid__wrapper, .about--page .title {
+  grid-column: 1/5;
+}
+.about--page .grid__wrapper_1 {
+  grid-row: 2/3;
+}
+.about--page .grid__wrapper_2 {
+  grid-row: 3/4;
+}
+.about--page .title {
+  grid-row: 1/2;
+  margin-top: 15rem;
 }
 
 @media screen and (min-width: 620px) {
@@ -1340,6 +1370,31 @@ body {
     padding-top: 0;
     margin: 12.75rem 0;
   }
+  .about--page .grid__line {
+    grid-row: 1/4;
+  }
+  .about--page .title {
+    grid-column: 4/8;
+    text-align: center;
+    margin-top: 15rem;
+    margin-bottom: 1em;
+  }
+  .about--page .grid__wrapper {
+    grid-column: 2/10;
+    margin-bottom: 6rem;
+    align-items: center;
+  }
+  .about--page .grid__wrapper:nth-child(odd) .about__img_container {
+    grid-column: 6/9;
+    margin: 0;
+  }
+  .about--page .grid__wrapper:nth-child(even) .about__img_container {
+    grid-column: 1/4;
+    margin: 0;
+  }
+  .about--page .grid__wrapper:nth-child(even) .text {
+    grid-column: 5/9;
+  }
 }
 @media screen and (min-width: 1580px) {
   .about .angle {
@@ -1347,6 +1402,12 @@ body {
   }
   .about__img_container {
     grid-column: 9/12;
+  }
+  .about--page .title {
+    grid-column: 5/9;
+  }
+  .about--page .grid__wrapper {
+    grid-column: 3/11;
   }
 }
 .main-nav ul {
@@ -1469,6 +1530,18 @@ body {
   border-radius: 9999px;
   padding: 0.3em 1em;
   margin-bottom: 2rem;
+}
+
+.wysiwyg p:not(:last-of-type) {
+  margin-bottom: 1em;
+}
+
+strong, b {
+  font-weight: bold;
+}
+
+em, i {
+  font-style: italic;
 }
 
 .text-center {

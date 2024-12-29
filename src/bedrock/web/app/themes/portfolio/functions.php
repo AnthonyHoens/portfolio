@@ -183,6 +183,44 @@ function esc_html_f(
 }
 
 /**
+ * Allow SVG
+ */
+add_filter('wp_check_filetype_and_ext', function ($data, $file, $filename, $mimes) {
+    global $wp_version;
+    if ($wp_version !== '4.7.1') {
+        return $data;
+    }
+
+    $filetype = wp_check_filetype($filename, $mimes);
+
+    return [
+        'ext' => $filetype['ext'],
+        'type' => $filetype['type'],
+        'proper_filename' => $data['proper_filename']
+    ];
+}, 10, 4);
+
+function cc_mime_types($mimes)
+{
+    $mimes['svg'] = 'image/svg+xml';
+    return $mimes;
+}
+
+add_filter('upload_mimes', 'cc_mime_types');
+
+function fix_svg(): void
+{
+    echo '<style type="text/css">
+        .attachment-266x266, .thumbnail img {
+             width: 100% !important;
+             height: auto !important;
+        }
+        </style>';
+}
+
+add_action('admin_head', 'fix_svg');
+
+/**
  * Insert acf fields.
  */
 add_action('acf/include_fields', function () {
@@ -190,7 +228,7 @@ add_action('acf/include_fields', function () {
         return;
     }
 
-    acf_add_local_field_group(array(
+    acf_add_local_field_group(field_group: array(
         'key' => 'group_676eca9631163',
         'title' => 'About Page',
         'fields' => array(
@@ -220,7 +258,7 @@ add_action('acf/include_fields', function () {
                 'label' => 'About text',
                 'name' => 'about_text',
                 'aria-label' => '',
-                'type' => 'text',
+                'type' => 'wysiwyg',
                 'instructions' => '',
                 'required' => 0,
                 'conditional_logic' => 0,
@@ -267,7 +305,7 @@ add_action('acf/include_fields', function () {
                 'label' => 'Passion Text',
                 'name' => 'passion_text',
                 'aria-label' => '',
-                'type' => 'text',
+                'type' => 'wysiwyg',
                 'instructions' => '',
                 'required' => 0,
                 'conditional_logic' => 0,
@@ -309,81 +347,13 @@ add_action('acf/include_fields', function () {
                 'allow_in_bindings' => 0,
                 'preview_size' => 'medium',
             ),
-            array(
-                'key' => 'field_676ecb3c7ed7e',
-                'label' => 'Sport_text',
-                'name' => 'sport_text',
-                'aria-label' => '',
-                'type' => 'text',
-                'instructions' => '',
-                'required' => 0,
-                'conditional_logic' => 0,
-                'wrapper' => array(
-                    'width' => '',
-                    'class' => '',
-                    'id' => '',
-                ),
-                'default_value' => '',
-                'maxlength' => '',
-                'allow_in_bindings' => 0,
-                'placeholder' => '',
-                'prepend' => '',
-                'append' => '',
-            ),
-            array(
-                'key' => 'field_676ecb537ed7f',
-                'label' => 'Sport Image',
-                'name' => 'sport_img',
-                'aria-label' => '',
-                'type' => 'image',
-                'instructions' => '',
-                'required' => 0,
-                'conditional_logic' => 0,
-                'wrapper' => array(
-                    'width' => '',
-                    'class' => '',
-                    'id' => '',
-                ),
-                'return_format' => 'id',
-                'library' => 'all',
-                'min_width' => '',
-                'min_height' => '',
-                'min_size' => '',
-                'max_width' => '',
-                'max_height' => '',
-                'max_size' => '',
-                'mime_types' => '',
-                'allow_in_bindings' => 0,
-                'preview_size' => 'medium',
-            ),
-            array(
-                'key' => 'field_676ecb9b7ed81',
-                'label' => 'Philosophy Text',
-                'name' => 'philosophy_text',
-                'aria-label' => '',
-                'type' => 'text',
-                'instructions' => '',
-                'required' => 0,
-                'conditional_logic' => 0,
-                'wrapper' => array(
-                    'width' => '',
-                    'class' => '',
-                    'id' => '',
-                ),
-                'default_value' => '',
-                'maxlength' => '',
-                'allow_in_bindings' => 0,
-                'placeholder' => '',
-                'prepend' => '',
-                'append' => '',
-            ),
         ),
         'location' => array(
             array(
                 array(
                     'param' => 'page',
                     'operator' => '==',
-                    'value' => '6',
+                    'value' => '8',
                 ),
             ),
         ),
