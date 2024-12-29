@@ -1,6 +1,4 @@
 .single_project {
-
-
   &__landing_page {
     width: 100%;
   }
@@ -233,6 +231,219 @@
 
     &__design {
       padding: 7rem 15.125rem;
+    }
+  }
+}
+
+.project__list {
+  .project {
+    position: relative;
+    color: $color-light;
+    padding: 5rem 2rem;
+
+    &:nth-child(even) {
+      background-color: $color-grey-500;
+
+      .project__img_container {
+        order: 2;
+      }
+    }
+
+    &:nth-child(odd) {
+      background-color: $color-grey-400;
+    }
+
+    .container {
+      display: flex;
+      flex-direction: column;
+      gap: 3rem 1.5rem;
+    }
+
+    img {
+      aspect-ratio: 10 / 6;
+      object-fit: cover;
+    }
+  }
+}
+
+@media screen and (min-width: $screen-lg) {
+  .project__list {
+    .project {
+      padding: 5rem 6rem;
+
+      .container {
+        gap: 2rem;
+        flex-direction: row;
+        align-items: center;
+      }
+
+      img {
+        aspect-ratio: 10 / 5;
+      }
+
+      &__text_container {
+        flex: 2;
+      }
+
+      &__img_container {
+        flex: 3;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: $screen-xl) {
+  .project__list {
+    .project {
+      .container {
+        gap: 3rem;
+      }
+
+      &__text_container {
+        flex: 4;
+      }
+
+      &__img_container {
+        flex: 5;
+      }
+    }
+  }
+}
+
+.some_projects {
+  background-color: #272727;
+  padding: 6rem 2rem;
+
+  &__title {
+    display: block;
+    width: 100%;
+    font-size: 1.999rem;
+    color: white;
+    margin-bottom: 2rem;
+  }
+
+  .project {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    &:not(:last-of-type) {
+      margin-bottom: 2rem;
+    }
+
+    &:nth-child(odd) .project__number {
+      color: rgba(179, 254, 255, 0.5);
+    }
+
+    &:nth-child(even) .project__number {
+      color: rgba(27, 130, 132, 0.5);
+    }
+
+    &:nth-child(even) .project__title a:hover, &:nth-child(even) .project__title a:focus {
+      color: #1B8284;
+    }
+
+    &:nth-child(odd) .project__title a:hover, &:nth-child(odd) .project__title a:focus {
+      color: #B3FEFF;
+    }
+
+    &__info_container {
+      position: relative;
+      z-index: 10;
+      flex: 1;
+    }
+
+    &__number {
+      font-family: 'Abril Fatface', cursive;
+      font-size: 7.993rem;
+      line-height: normal;
+      margin-bottom: -2rem;
+    }
+
+    &__title {
+      font-size: 1.999rem;
+      color: white;
+      margin-bottom: 1rem;
+    }
+
+    &__title a {
+      text-decoration: none;
+      color: white;
+      transition: color .3s ease;
+    }
+
+
+    &__img_container {
+      position: relative;
+      width: 100%;
+    }
+
+    &__img_container a {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+    }
+
+    &__img_container img {
+      width: 100%;
+      display: block;
+    }
+  }
+
+
+  @media screen and (min-width: 1024px) {
+    & {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      align-items: stretch;
+      gap: 1.5rem;
+      padding: 6rem;
+
+      & .project:not(:last-of-type) {
+        margin: 0;
+      }
+
+
+      .project {
+        flex: 1;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        margin: 0;
+
+
+        &__info_container {
+          position: absolute;
+          flex: 1;
+        }
+
+        &__img_container {
+          width: 90%;
+          margin-left: 10%;
+        }
+
+      }
+    }
+  }
+
+  @media screen and (min-width: 1580px) {
+    .project {
+
+      &__info_container {
+        position: relative;
+        flex: 1;
+        margin-right: -5rem;
+      }
+
+      &__img_container {
+        flex: 3;
+        width: 100%;
+        margin-left: 0;
+      }
     }
   }
 }

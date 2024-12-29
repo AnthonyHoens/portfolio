@@ -1,0 +1,142 @@
+/* @link https://utopia.fyi/type/calculator?c=320,15,1.125,1200,18,1.2,8,2,&s=0.75|0.5|0.25,1.5|2|3|4|6,s-l&g=s,l,xl,12 */
+
+/** Font Size **/
+$html-font-size: 16px;
+
+/* Step -2: 11.8519px → 12.5px */
+$font-size--2: clamp(0.7407rem, 0.726rem + 0.0737vw, 0.7813rem);
+/* Step -1: 13.3333px → 15px */
+$font-size--1: clamp(0.8333rem, 0.7955rem + 0.1894vw, 0.9375rem);
+/* Step 0: 15px → 18px */
+$font-size-p: clamp(0.9375rem, 0.8693rem + 0.3409vw, 1.125rem);
+/* Step 1: 16.875px → 21.6px */
+$font-size-8: clamp(1.0547rem, 0.9473rem + 0.5369vw, 1.35rem);
+/* Step 2: 18.9844px → 25.92px */
+$font-size-7: clamp(1.1865rem, 1.0289rem + 0.7881vw, 1.62rem);
+/* Step 3: 21.3574px → 31.104px */
+$font-size-6: clamp(1.3348rem, 1.1133rem + 1.1076vw, 1.944rem);
+/* Step 4: 24.0271px → 37.3248px */
+$font-size-5: clamp(1.5017rem, 1.1995rem + 1.5111vw, 2.3328rem);
+/* Step 5: 27.0305px → 44.7898px */
+$font-size-4: clamp(1.6894rem, 1.2858rem + 2.0181vw, 2.7994rem);
+/* Step 6: 30.4093px → 53.7477px */
+$font-size-3: clamp(1.9006rem, 1.3702rem + 2.6521vw, 3.3592rem);
+/* Step 7: 34.2105px → 64.4973px */
+$font-size-2: clamp(2.1382rem, 1.4498rem + 3.4417vw, 4.0311rem);
+/* Step 8: 38.4868px → 77.3967px */
+$font-size-1: clamp(2.4054rem, 1.5211rem + 4.4216vw, 4.8373rem);
+
+/** Colors **/
+$color-light: #fff;
+$color-dark: #000;
+
+$color-primary-100: #D1F8EC;
+$color-primary-200: #A5F2E0;
+$color-primary-300: #72DACA;
+$color-primary-400: #49B5AE;
+$color-primary-500: #1B8284;
+$color-primary-600: #136771;
+$color-primary-700: #0D4F5F;
+$color-primary-800: #08394C;
+$color-primary-900: #052A3F;
+
+$color-grey-100: #F4F4F4;
+$color-grey-200: #E9E9E9;
+$color-grey-300: #BEBEBE;
+$color-grey-400: #7D7D7D;
+$color-grey-500: #272727;
+$color-grey-600: #211C1C;
+$color-grey-700: #1C1315;
+$color-grey-800: #160C0F;
+$color-grey-900: #12070B;
+
+$color-success-100: #E2FBD5;
+$color-success-200: #C0F8AD;
+$color-success-300: #92EA81;
+$color-success-400: #66D65D;
+$color-success-500: #2FBC31;
+$color-success-600: #22A12F;
+$color-success-700: #17872C;
+$color-success-800: #0E6D28;
+$color-success-900: #095A26;
+
+$color-info-100: #D2E4FE;
+$color-info-200: #A6C7FE;
+$color-info-300: #7AA7FE;
+$color-info-400: #598CFD;
+$color-info-500: #2360FC;
+$color-info-600: #1949D8;
+$color-info-700: #1136B5;
+$color-info-800: #0B2592;
+$color-info-900: #061978;
+
+$color-warning-100: #FEF9CB;
+$color-warning-200: #FEF298;
+$color-warning-300: #FCE865;
+$color-warning-400: #FADE3E;
+$color-warning-500: #F7CE00;
+$color-warning-600: #D4AD00;
+$color-warning-700: #B18E00;
+$color-warning-800: #8F7000;
+$color-warning-900: #765A00;
+
+$color-danger-100: #FDE9D2;
+$color-danger-200: #FBCEA5;
+$color-danger-300: #F4AA77;
+$color-danger-400: #EA8754;
+$color-danger-500: #DD5321;
+$color-danger-600: #BE3818;
+$color-danger-700: #9F2210;
+$color-danger-800: #80110A;
+$color-danger-900: #6A0607;
+
+$color-primary-transparent-100: rgba($color-primary-500, 0.10);
+$color-primary-transparent-200: rgba($color-primary-500, 0.20);
+$color-primary-transparent-300: rgba($color-primary-500, 0.30);
+$color-primary-transparent-400: rgba($color-primary-500, 0.40);
+$color-primary-transparent-500: rgba($color-primary-500, 0.50);
+$color-primary-transparent-600: rgba($color-primary-500, 0.60);
+$color-primary-transparent-700: rgba($color-primary-500, 0.70);
+$color-primary-transparent-800: rgba($color-primary-500, 0.80);
+$color-primary-transparent-900: rgba($color-primary-500, 0.90);
+
+$color-light-transparent-100: rgba($color-light, 0.10);
+$color-light-transparent-200: rgba($color-light, 0.20);
+$color-light-transparent-300: rgba($color-light, 0.30);
+$color-light-transparent-400: rgba($color-light, 0.40);
+$color-light-transparent-500: rgba($color-light, 0.50);
+$color-light-transparent-600: rgba($color-light, 0.60);
+$color-light-transparent-700: rgba($color-light, 0.70);
+$color-light-transparent-800: rgba($color-light, 0.80);
+$color-light-transparent-900: rgba($color-light, 0.90);
+
+$color-dark-transparent-100: rgba($color-dark, 0.10);
+$color-dark-transparent-200: rgba($color-dark, 0.20);
+$color-dark-transparent-300: rgba($color-dark, 0.30);
+$color-dark-transparent-400: rgba($color-dark, 0.40);
+$color-dark-transparent-500: rgba($color-dark, 0.50);
+$color-dark-transparent-600: rgba($color-dark, 0.60);
+$color-dark-transparent-700: rgba($color-dark, 0.70);
+$color-dark-transparent-800: rgba($color-dark, 0.80);
+$color-dark-transparent-900: rgba($color-dark, 0.90);
+
+/** Media Queries **/
+$screen-sm: 620px;
+$screen-md: 768px;
+$screen-lg: 1024px;
+$screen-xl: 1280px;
+$screen-xxl: 1580px;
+
+$screen-min-width: 320px;
+$screen-max-width: 1920px;
+
+/** Font Family **/
+$main-font-family: 'Inter', sans-serif;
+$serif-font-family: 'Abril Fatface', serif;
+
+$border-radius: 0.75rem;
+$border-full: 9999px;
+$angle-border: 2px solid $color-primary-500;
+
+/** Z-Index **/
+$header-index: 9999;

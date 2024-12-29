@@ -1,0 +1,45 @@
+.btn {
+  display: inline-block;
+  font-family: $main-font-family;
+  font-size: $font-size-p;
+  padding: 1em 3em;
+  cursor: pointer;
+  border-width: 1px;
+  border-style: solid;
+  border-color: transparent;
+  border-radius: $border-radius;
+  text-decoration: none;
+  transition: background-color .3s, color .3s, border .3s;
+}
+
+.btn--primary {
+  color: $color-light;
+  border-color: $color-light;
+  background-color: $color-light-transparent-200;
+}
+
+.btn--primary:hover,
+.btn--primary:focus {
+  color: $color-dark;
+  background-color: $color-light;
+}
+
+.btn--secondary {
+  color: $color-primary-500;
+  background-color: $color-light;
+  border-color: $color-primary-500;
+}
+
+.btn--secondary:hover,
+.btn--secondary:focus {
+  color: $color-light;
+  background-color: $color-primary-500;
+}
+
+.btn--small {
+  padding: 1em;
+}
+
+.btn--large {
+  padding: 1em 7em;
+}

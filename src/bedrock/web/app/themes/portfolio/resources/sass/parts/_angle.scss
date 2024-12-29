@@ -1,0 +1,51 @@
+.angle-container {
+  position: relative;
+
+  &:not(.disable-hover):hover {
+    .angle {
+      --spacing: 0;
+    }
+  }
+}
+
+.angle {
+  --spacing: -1rem;
+
+  display: block;
+  position: absolute;
+  width: 6rem;
+  height: 4rem;
+  transition: 0.3s;
+
+  &__top_left {
+    top: var(--spacing);
+    left: var(--spacing);
+
+    border-top: $angle-border;
+    border-left: $angle-border;
+  }
+
+  &__top_right {
+    top: var(--spacing);
+    right: var(--spacing);
+
+    border-top: $angle-border;
+    border-right: $angle-border;
+  }
+
+  &__bottom_left {
+    bottom: var(--spacing);
+    left: var(--spacing);
+
+    border-bottom: $angle-border;
+    border-left: $angle-border;
+  }
+
+  &__bottom_right {
+    bottom: var(--spacing);
+    right: var(--spacing);
+
+    border-bottom: $angle-border;
+    border-right: $angle-border;
+  }
+}

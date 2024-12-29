@@ -1,10 +1,11 @@
-@import "font";
 @import "reset";
+@import "variable";
 
 html {
-  font-size: 16px;
-  font-family: "Reem Kufi", sans-serif;
-  color: #808080;
+  font-size: $html-font-size;
+  font-family: $main-font-family;
+  line-height: 1.5;
+  color: $color-dark;
   scroll-behavior: smooth;
 }
 
@@ -24,12 +25,17 @@ body::-webkit-scrollbar-track, body *::-webkit-scrollbar-track {
 body::-webkit-scrollbar-thumb,
 body *::-webkit-scrollbar-thumb {
   background-color: #1B8284;
-  border-radius: 9999px;
+  border-radius: $border-full;
 }
 
-p {
-  font-size: 1rem;
-  line-height: 25px;
+.container {
+  width: 100%;
+  max-width: $screen-max-width;
+  margin: 0 auto;
+}
+
+img {
+  max-width: 100%;
 }
 
 .sro {
@@ -44,9 +50,17 @@ p {
   border-width: 0;
 }
 
+@import "parts/fonts";
+@import "parts/link";
 @import "parts/header";
 @import "parts/home-page";
+@import "parts/grid";
+@import "parts/hero";
 @import "parts/footer";
 @import "parts/project";
 @import "parts/contact";
 @import "parts/about";
+@import "parts/nav";
+@import "parts/angle";
+@import "parts/philosophy";
+@import "parts/helpers";

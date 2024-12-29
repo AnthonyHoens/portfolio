@@ -47,3 +47,36 @@ msgstr ""
 
 msgid "Anthony Hoens's picture"
 msgstr ""
+
+msgid "Projects"
+msgstr ""
+
+msgid "Project"
+msgstr ""
+
+msgid "Add a project"
+msgstr ""
+
+msgid "Add a new project"
+msgstr ""
+
+msgid "Modify a project"
+msgstr ""
+
+msgid "New project"
+msgstr ""
+
+msgid "All projects realised by Anthony Hoens."
+msgstr ""
+
+msgid "Hello,"
+msgstr ""
+
+msgid "I am Anthony Hoens, a full-stack developer with 3 years of experience. I am passionate about my work and take pride in providing clear communication, collaborative work, and complete commitment."
+msgstr ""
+
+msgid "Specialized in PHP (Laravel, WordPress, Magento) and front-end (React, jQuery, CSS), I develop scalable applications and dynamic interfaces, with a strong focus on website performance."
+msgstr ""
+
+msgid "There is only one way to fail: to give up before succeeding."
+msgstr ""

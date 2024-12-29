@@ -1,6 +1,6 @@
 <?php
 
-if(!defined('THEME_TEXT_DOMAIN')) define('THEME_TEXT_DOMAIN', 'portfolio');
+if (!defined('THEME_TEXT_DOMAIN')) define('THEME_TEXT_DOMAIN', 'portfolio');
 
 /**
  * Load theme text domain.
@@ -14,46 +14,48 @@ function my_theme_text_domain_locale(): void
 
 add_action('after_setup_theme', 'my_theme_text_domain_locale', 100);
 
-/* ****
- *  Return the attributes of an img
- * ****/
-
-function dw_the_img_attributes($id, $sizes = []) {
+/**
+ * Build the image attributes of an img ID.
+ *
+ * @param int $id
+ * @param string[] $sizes
+ * @return string
+ */
+function dw_the_img_attributes(int $id, array $sizes = []): string
+{
     $src = wp_get_attachment_url($id);
-    $thumbnail_meta =  get_post_meta($id);
+    $thumbnail_meta = get_post_meta($id);
 
-
-    $sizes = array_map(function($size) use ($id, $src) {
+    $sizes = array_map(function ($size) use ($id, $src) {
         $data = wp_get_attachment_image_src($id, $size);
 
-        if(is_null($src)) {
+        if (is_null($src)) {
             $src = $data[0];
         }
 
         return $data[0] . ' ' . $data[1] . 'w';
     }, $sizes);
 
-
     $srcset = implode(', ', $sizes);
     $alt = $thumbnail_meta['_wp_attachment_image_alt'][0] ?? null;
-
 
     return 'src="' . $src . '" srcset="' . $srcset . '" alt="' . $alt . '"';
 }
 
-
-/* ****
- *  Return a compiled asset's URI
- * ****/
-
-function dw_menu($location)
+/**
+ * Get the menu.
+ *
+ * @param string $location
+ * @return stdClass[]
+ */
+function dw_menu(string $location): array
 {
     $locations = get_nav_menu_locations();
     $menu = $locations[$location];
 
     $links = wp_get_nav_menu_items($menu);
 
-    $links = array_map(function ($post) {
+    return array_map(function ($post) {
         $link = new \stdClass();
 
         $link->classes = $post->classes[0];
@@ -70,38 +72,38 @@ function dw_menu($location)
 
         return $link;
     }, $links);
-
-    return $links;
 }
 
-/* ****
- *  Return a compiled asset's URI
- * ****/
-
-function dw_asset($path)
+/**
+ * Return a compiled asset's URI
+ *
+ * @param string $path
+ * @return string
+ */
+function dw_asset(string $path): string
 {
     return rtrim(get_template_directory_uri(), '/') . '/public/' . ltrim($path, '/');
 }
 
-/* ****
- *  Register custom post type
- * ****/
-
-add_action('init', 'dw_custom_post_type');
-
-function dw_custom_post_type()
+/**
+ * Register project custom post type
+ *
+ * @return void
+ */
+function dw_custom_post_type(): void
 {
     register_post_type('project', [
-        'label' => 'Projets',
+        'label' => esc_html__('Projects', THEME_TEXT_DOMAIN),
         'labels' => [
-            'singular_name' => 'Projet',
-            'add_new' => 'Ajouter un projet',
-            'add_new_item' => 'Ajouter un nouveau projet',
-            'edit_item' => 'Modifier un projet',
-            'new_item' => 'Nouveau projet',
+            'singular_name' => esc_html__('Project', THEME_TEXT_DOMAIN),
+            'add_new' => esc_html__('Add a project', THEME_TEXT_DOMAIN),
+            'add_new_item' => esc_html__('Add a new project', THEME_TEXT_DOMAIN),
+            'edit_item' => esc_html__('Modify a project', THEME_TEXT_DOMAIN),
+            'new_item' => esc_html__('New project', THEME_TEXT_DOMAIN),
         ],
-        'description' => 'Tous les projets réalisés par Anthony Hoens.',
+        'description' => esc_html__('All projects realised by Anthony Hoens.', THEME_TEXT_DOMAIN),
         'public' => true,
+        'has_archive' => true,
         'menu_position' => 5,
         'supports' => ['title'],
         'menu_icon' => 'dashicons-code-standards',
@@ -109,31 +111,51 @@ function dw_custom_post_type()
             'slug' => 'projects',
         ],
     ]);
+
+    register_taxonomy(
+        'project-owner',
+        'project',
+        [
+            'label' => esc_html__('Projects realised by', THEME_TEXT_DOMAIN),
+            'labels' => [
+                'singular_name' => esc_html__('Project realised by', THEME_TEXT_DOMAIN),
+                'add_new' => esc_html__('Add a project realised by', THEME_TEXT_DOMAIN),
+                'add_new_item' => esc_html__('Add a new project realised by', THEME_TEXT_DOMAIN),
+                'edit_item' => esc_html__('Modify a project realised by', THEME_TEXT_DOMAIN),
+                'new_item' => esc_html__('New project realised by', THEME_TEXT_DOMAIN),
+            ],
+            'has_archive' => true,
+        ]
+    );
 }
 
-/* ****
- *  Register navigations menus
- * ****/
-add_action('init', 'dw_custom_navigation_menus');
+add_action('init', 'dw_custom_post_type');
 
-function dw_custom_navigation_menus()
+/**
+ * Register navigations menus
+ *
+ * @return void
+ */
+function dw_custom_navigation_menus(): void
 {
     register_nav_menus([
-        'main' => 'Navigation principale',
+        'main' => esc_html__('Main Navigation', THEME_TEXT_DOMAIN),
     ]);
 }
 
+add_action('init', 'dw_custom_navigation_menus');
 
-/* ****
- *  Disable Gutenberg Editor
- * ****/
-
-add_filter("use_block_editor_for_post_type", "disable_gutenberg_editor");
-
-function disable_gutenberg_editor()
+/**
+ * Disable Gutenberg Editor
+ *
+ * @return bool
+ */
+function disable_gutenberg_editor(): bool
 {
     return false;
 }
+
+add_filter("use_block_editor_for_post_type", "disable_gutenberg_editor");
 
 /**
  * Escaping the translation of a formatted string.
@@ -151,21 +173,24 @@ function disable_gutenberg_editor()
 function esc_html_f(
     string $format,
     string $domain = 'default',
-    mixed ...$formatValues
-): string {
+    mixed  ...$formatValues
+): string
+{
     $translatedFormat = __($format, $domain);
     $translatedText = sprintf($translatedFormat, ...$formatValues);
 
     return esc_html($translatedText);
 }
 
-
-add_action( 'acf/include_fields', function() {
-    if ( ! function_exists( 'acf_add_local_field_group' ) ) {
+/**
+ * Insert acf fields.
+ */
+add_action('acf/include_fields', function () {
+    if (!function_exists('acf_add_local_field_group')) {
         return;
     }
 
-    acf_add_local_field_group( array(
+    acf_add_local_field_group(array(
         'key' => 'group_676eca9631163',
         'title' => 'About Page',
         'fields' => array(
@@ -371,9 +396,9 @@ add_action( 'acf/include_fields', function() {
         'active' => true,
         'description' => '',
         'show_in_rest' => 0,
-    ) );
+    ));
 
-    acf_add_local_field_group( array(
+    acf_add_local_field_group(array(
         'key' => 'group_676ecc13a1c96',
         'title' => 'Single Projects',
         'fields' => array(
@@ -629,6 +654,6 @@ add_action( 'acf/include_fields', function() {
         'active' => true,
         'description' => '',
         'show_in_rest' => 0,
-    ) );
-} );
+    ));
+});
 

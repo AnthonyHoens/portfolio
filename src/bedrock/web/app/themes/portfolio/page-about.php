@@ -1,29 +1,27 @@
 <?php get_header(); ?>
 
 <main class="main">
-    <section class="main__about about main__special_about">
-        <span class="about__grid about__grid_1"></span>
-        <span class="about__grid about__grid_2"></span>
-        <span class="about__grid about__grid_3"></span>
-        <span class="about__grid about__grid_4"></span>
-        <span class="about__grid about__grid_5"></span>
-        <span class="about__grid about__grid_6"></span>
-        <span class="about__grid about__grid_7"></span>
-        <span class="about__grid about__grid_8"></span>
-        <span class="about__grid about__grid_9"></span>
-        <span class="about__grid about__grid_10"></span>
-        <span class="about__grid about__grid_11"></span>
-        <span class="about__grid about__grid_12"></span>
+    <section class="main__about main__special_about about grid">
+        <span class="grid__line grid__line_1"></span>
+        <span class="grid__line grid__line_2"></span>
+        <span class="grid__line grid__line_3"></span>
+        <span class="grid__line grid__line_4"></span>
+        <span class="grid__line grid__line_5"></span>
+        <span class="grid__line grid__line_6"></span>
+        <span class="grid__line grid__line_7"></span>
+        <span class="grid__line grid__line_8"></span>
+        <span class="grid__line grid__line_9"></span>
+        <span class="grid__line grid__line_10"></span>
+        <span class="grid__line grid__line_11"></span>
+        <span class="grid__line grid__line_12"></span>
 
         <h2 role="heading" aria-level="2" class="sro">
             <?= esc_html(get_the_title()); ?>
         </h2>
 
-        <?php if (!empty(get_field('hello'))): ?>
-            <p class="about__special_title">
-                <?= esc_html(get_field('hello')); ?>
-            </p>
-        <?php endif; ?>
+        <p class="about__special_title">
+            <?= esc_html__('Hello,', THEME_TEXT_DOMAIN); ?>
+        </p>
 
         <?php if (!empty(get_field('about_text')) && !empty(get_field('about_img'))): ?>
             <div class="about__wrap about__wrap_1 wrap">
@@ -70,14 +68,6 @@
             </div>
         <?php endif; ?>
     </section>
-
-    <?php if (!empty(get_field('philosophy_text'))): ?>
-        <blockquote class="philosophy">
-            <p class="philosophy__text">
-                <?= esc_html(get_field('philosophy_text')); ?>
-            </p>
-        </blockquote>
-    <?php endif; ?>
 
     <?php
         $projects = new WP_Query([

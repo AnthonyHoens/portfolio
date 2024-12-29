@@ -1,0 +1,28 @@
+.philosophy {
+  background-color: $color-grey-200;
+  padding: 4rem;
+  text-align: center;
+
+  blockquote {
+    width: 100%;
+    font-size: $font-size-8;
+    font-style: italic;
+    max-width: 53.25rem;
+    margin: 0 auto;
+    color: $color-dark;
+
+    &::before {
+      content: '“';
+    }
+
+    &::after {
+      content: '”';
+    }
+  }
+
+  figcaption {
+    font-size: $font-size-p;
+    font-weight: 500;
+    margin-top: 1rem;
+  }
+}
