@@ -1563,6 +1563,7 @@ body {
      object-fit: cover;
 }
 .about .title {
+  width: 100%;
   color: #000;
 }
 .about .text {
