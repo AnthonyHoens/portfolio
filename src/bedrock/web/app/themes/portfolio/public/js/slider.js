@@ -8,8 +8,8 @@ window.addEventListener('DOMContentLoaded', function (event) {
     slidesToScroll: 1,
     draggable: true,
     arrows: {
-      prev: '.glider-prev',
-      next: '.glider-next'
+      prev: '.arrow-prev',
+      next: '.arrow-next'
     },
     responsive: [{
       breakpoint: 620,

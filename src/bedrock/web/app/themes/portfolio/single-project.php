@@ -90,10 +90,15 @@
     ]);
     ?>
     <section class="projects-list--slider">
-        <div class="container">
+        <div class="container arrows__container">
             <h2 aria-level="2" role="heading" class="title h3">
                 <?= esc_html__('Some of my projects', THEME_TEXT_DOMAIN) ?>
             </h2>
+
+            <div class="arrows">
+                <img src="<?= dw_asset('/images/icons/arrow--left.svg') ?>" class="arrow arrow-prev" alt/>
+                <img src="<?= dw_asset('/images/icons/arrow--right.svg') ?>" class="arrow arrow-next" alt/>
+            </div>
         </div>
         <div class="container js-projects-slider">
             <?php if ($projects->have_posts()): while($projects->have_posts()): $projects->the_post(); ?>

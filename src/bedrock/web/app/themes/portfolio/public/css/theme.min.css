@@ -1886,6 +1886,30 @@ body {
     display: none;
   }
 }
+.arrows {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 2rem;
+}
+.arrows .arrow {
+  cursor: pointer;
+}
+.arrows .arrow.disabled {
+  opacity: 0.6;
+  cursor: auto;
+}
+.arrows__container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 3rem;
+}
+.arrows__container .title {
+  margin-bottom: 0;
+}
+
 .wysiwyg p:not(:last-of-type) {
   margin-bottom: 1em;
 }

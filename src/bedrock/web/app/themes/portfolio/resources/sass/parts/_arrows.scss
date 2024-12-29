@@ -1,0 +1,27 @@
+.arrows {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 2rem;
+
+  .arrow {
+    cursor: pointer;
+
+    &.disabled {
+      opacity: .6;
+      cursor: auto;
+    }
+  }
+
+  &__container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    margin-bottom: 3rem;
+
+    .title {
+      margin-bottom: 0;
+    }
+  }
+}
