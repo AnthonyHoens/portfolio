@@ -249,8 +249,17 @@
       }
     }
 
+    .title {
+      margin-bottom: .1em;
+    }
+
+    .text {
+      font-size: $font-size--1;
+      color: $color-light-transparent-700;
+    }
+
     &:nth-child(odd) {
-      background-color: $color-grey-400;
+      background-color: rgba($color-grey-500, 0.8);
     }
 
     .container {

@@ -1,57 +1,65 @@
 <?php get_header(); ?>
 
-    <div class="wrap">
-        <?php if ( is_home() && ! is_front_page() ) : ?>
-            <header class="page-header">
-                <h1 class="page-title"><?php single_post_title(); ?></h1>
-            </header>
-        <?php else : ?>
-            <header class="page-header">
-                <h2 class="page-title"><?php _e( 'Posts', 'twentyseventeen' ); ?></h2>
-            </header>
-        <?php endif; ?>
+    <main class="main">
+        <section class="hero hero--with-bg">
+            <h1 class="title text-center mb-0" aria-level="1" role="heading">
+                <?= esc_html__('My projects', THEME_TEXT_DOMAIN) ?>
+            </h1>
+            <a href="<?= esc_url(sprintf('mailto:%s', get_option('new_admin_email'))) ?>" class="btn btn--primary" itemprop="url">
+                <?= esc_html__('Get in touch', THEME_TEXT_DOMAIN) ?>
+            </a>
+        </section>
 
-        <div id="primary" class="content-area">
-            <main id="main" class="site-main">
+        <section class="main__projects project__list" id="projects">
+            <?php if (have_posts()) : while(have_posts()) : the_post(); ?>
+                <?php $terms = wp_get_post_terms(get_the_ID(), 'project-owner'); ?>
+                <section class="project">
+                    <div class="container">
+                        <div class="project__img_container angle-container">
+                            <span class="angle angle__bottom_left"></span>
+                            <span class="angle angle__bottom_right"></span>
+                            <span class="angle angle__top_left"></span>
+                            <span class="angle angle__top_right"></span>
 
-                <?php
-                if ( have_posts() ) :
-
-                    // Start the Loop.
-                    while ( have_posts() ) :
-                        the_post();
-
-                        /*
-                         * Include the Post-Format-specific template for the content.
-                         * If you want to override this in a child theme, then include a file
-                         * called content-___.php (where ___ is the Post Format name) and that
-                         * will be used instead.
-                         */
-                        get_template_part( 'template-parts/post/content', get_post_format() );
-
-                    endwhile;
-
-                    the_posts_pagination(
-                        array(
-                            /* translators: Hidden accessibility text. */
-                            'prev_text'          => '<span class="screen-reader-text">' . __( 'Previous page', 'twentyseventeen' ) . '</span>',
-                            /* translators: Hidden accessibility text. */
-                            'next_text'          => '<span class="screen-reader-text">' . __( 'Next page', 'twentyseventeen' ) . '</span>',
-                            /* translators: Hidden accessibility text. */
-                            'before_page_number' => '<span class="meta-nav screen-reader-text">' . __( 'Page', 'twentyseventeen' ) . ' </span>',
-                        )
-                    );
-
-                else :
-
-                    get_template_part( 'template-parts/post/content', 'none' );
-
-                endif;
-                ?>
-
-            </main><!-- #main -->
-        </div><!-- #primary -->
-        <?php get_sidebar(); ?>
-    </div><!-- .wrap -->
+                            <?php if(!empty(get_field('cover_img'))): ?>
+                                <img class="img" <?= dw_the_img_attributes(get_field('cover_img'), ['thumbnail','medium', 'large']) ?>>
+                            <?php endif; ?>
+                            <?php if(!empty(get_field('logo'))): ?>
+                                <img class="img" <?= dw_the_img_attributes(get_field('logo'), ['thumbnail','medium', 'large']) ?>>
+                            <?php endif; ?>
+                        </div>
+                        <div class="project__text_container">
+                            <h2 class="title h2" aria-level="3" role="heading">
+                                <?= esc_html(get_the_title()); ?>
+                            </h2>
+                            <?php if(!empty(get_field('subtitle'))): ?>
+                                <p class="subtitle leading">
+                                    <?= esc_html(get_field('subtitle')) ?>
+                                </p>
+                            <?php endif; ?>
+                            <?php if(!empty($terms)): ?>
+                                <div class="tags">
+                                    <?php foreach ($terms as $term): ?>
+                                        <span class="tag"><?= esc_html($term->name) ?></span>
+                                    <?php endforeach; ?>
+                                </div>
+                            <?php endif; ?>
+                            <?php if(!empty(get_field('description'))): ?>
+                                <p class="text description">
+                                    <?= wp_kses(get_field('description'), ['b' => [], 'strong' => [], 'em' => [], 'i' => []]); ?>
+                                </p>
+                            <?php endif; ?>
+                        </div>
+                    </div>
+                </section>
+            <?php endwhile; else: ?>
+                <div class="container">
+                    <p class="project__no_project">
+                        <?= esc_html__("We haven't found a project yet.", THEME_TEXT_DOMAIN) ?>
+                    </p>
+                </div>
+            <?php endif; ?>
+        </section>
+    </main>
 
 <?php get_footer(); ?>

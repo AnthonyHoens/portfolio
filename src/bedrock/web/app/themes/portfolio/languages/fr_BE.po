@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2024-12-28 16:50+0100\n"
+"PO-Revision-Date: 2024-12-29 04:31+0100\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: fr_BE\n"
@@ -15,8 +15,84 @@ msgstr ""
 msgid "Some of my projects"
 msgstr "Quelques-uns de mes projets"
 
+msgid "Learn more"
+msgstr "En savoir plus"
+
 msgid "Learn more about %s"
 msgstr "En savoir plus à propos de %s"
 
 msgid "We haven't found a project yet."
 msgstr "Nous n'avons pas encore trouvé de projet."
+
+msgid "Link to the project website"
+msgstr "Lien vers le site du projet"
+
+msgid "View the project"
+msgstr "Voir le projet"
+
+msgid "About"
+msgstr "-À propos"
+
+msgid "Full-stack developer"
+msgstr "Développeur Full Stack"
+
+msgid "Get in touch"
+msgstr "Prenons contact"
+
+msgid "Main Navigation"
+msgstr "Navigation principale"
+
+msgid "All rights reserved."
+msgstr "Tous droits réservés."
+
+msgid "Close contact form"
+msgstr "Fermer le formulaire de contact"
+
+msgid "Anthony Hoens's picture"
+msgstr "Image de Anthony Hoens"
+
+msgid "Projects"
+msgstr "Projets"
+
+msgid "Project"
+msgstr "Projet"
+
+msgid "Add a project"
+msgstr "Ajouter un projet"
+
+msgid "Add a new project"
+msgstr "Ajouter un nouveau projet"
+
+msgid "Modify a project"
+msgstr "Modifier un projet"
+
+msgid "New project"
+msgstr "Nouveau projet"
+
+msgid "All projects realised by Anthony Hoens."
+msgstr "Tous les projets réalisé par Anthony Hoens."
+
+msgid "Hello,"
+msgstr "Bonjour,"
+
+msgid ""
+"I am Anthony Hoens, a full-stack developer with 3 years of experience. I am "
+"passionate about my work and take pride in providing clear communication, "
+"collaborative work, and complete commitment."
+msgstr ""
+"Je suis Anthony Hoens, développeur full-stack avec 3 ans d'expérience. Je "
+"suis passionné par mon métier et met un point d'honneur à offrir une "
+"communication claire, un travail collaboratif et un engagement total."
+
+msgid ""
+"Specialized in PHP (Laravel, WordPress, Magento) and front-end (React, "
+"jQuery, CSS), I develop scalable applications and dynamic interfaces, with a "
+"strong focus on website performance."
+msgstr ""
+"Spécialisé en PHP (Laravel, WordPress, Magento) et front-end (React, jQuery, "
+"CSS), je développe des applications évolutives et des interfaces dynamiques, "
+"tout en mettant un point d'honneur sur la performance des sites."
+
+msgid "There is only one way to fail: to give up before succeeding."
+msgstr ""
+"Il n'y a qu'une façon d'échouer, c'est d'abandonner avant d'avoir réussi."

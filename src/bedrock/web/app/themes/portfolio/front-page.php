@@ -33,11 +33,9 @@
             </h2>
             <p class="text">
                 <?= esc_html__('I am Anthony Hoens, a full-stack developer with 3 years of experience. I am passionate about my work and take pride in providing clear communication, collaborative work, and complete commitment.', THEME_TEXT_DOMAIN) ?>
-                <?php /**Je suis Anthony Hoens, développeur full-stack avec 3 ans d'expérience. Je suis passionné par mon métier et met un point d'honneur à offrir une communication claire, un travail collaboratif et un engagement total. **/ ?>
             </p>
             <p class="text">
                 <?= esc_html__('Specialized in PHP (Laravel, WordPress, Magento) and front-end (React, jQuery, CSS), I develop scalable applications and dynamic interfaces, with a strong focus on website performance.', THEME_TEXT_DOMAIN) ?>
-                <?php /** Spécialisé en PHP (Laravel, WordPress, Magento) et front-end (React, jQuery, CSS), je développe des applications évolutives et des interfaces dynamiques, tout en mettant un point d'honneur sur la performance des sites. **/ ?>
             </p>
         </div>
 
@@ -58,7 +56,6 @@
             <figure>
                 <blockquote>
                     <?= esc_html__("There is only one way to fail: to give up before succeeding.", THEME_TEXT_DOMAIN); ?>
-                    <?php /** Il n'y a qu'une façon d'échouer, c'est d'abandonner avant d'avoir réussi. */ ?>
                 </blockquote>
                 <figcaption>
                     <?= esc_html('Georges Clemenceau') ?>
@@ -81,7 +78,7 @@
         ?>
 
         <?php if ($projects->have_posts()) : while($projects->have_posts()) : $projects->the_post(); ?>
-
+            <?php $terms = wp_get_post_terms(get_the_ID(), 'project-owner'); ?>
             <section class="project">
                 <div class="container">
                     <div class="project__img_container angle-container">
@@ -90,14 +87,31 @@
                         <span class="angle angle__top_left"></span>
                         <span class="angle angle__top_right"></span>
 
-                        <img class="img" <?= dw_the_img_attributes(get_field('cover_img'), ['thumbnail','medium', 'large']) ?>>
+                        <?php if(!empty(get_field('cover_img'))): ?>
+                            <img class="img" <?= dw_the_img_attributes(get_field('cover_img'), ['thumbnail','medium', 'large']) ?>>
+                        <?php endif; ?>
+                        <?php if(!empty(get_field('logo'))): ?>
+                            <img class="img" <?= dw_the_img_attributes(get_field('logo'), ['thumbnail','medium', 'large']) ?>>
+                        <?php endif; ?>
                     </div>
                     <div class="project__text_container">
                         <h3 class="title h2" aria-level="3" role="heading">
                             <?= esc_html(get_the_title()); ?>
                         </h3>
+                        <?php if(!empty(get_field('subtitle'))): ?>
+                            <p class="subtitle leading">
+                                <?= esc_html(get_field('subtitle')) ?>
+                            </p>
+                        <?php endif; ?>
+                        <?php if(!empty($terms)): ?>
+                            <div class="tags">
+                                <?php foreach ($terms as $term): ?>
+                                    <span class="tag"><?= esc_html($term->name) ?></span>
+                                <?php endforeach; ?>
+                            </div>
+                        <?php endif; ?>
                         <?php if(!empty(get_field('description'))): ?>
-                            <p class="project__description">
+                            <p class="text description">
                                 <?= wp_kses(get_field('description'), ['b' => [], 'strong' => [], 'em' => [], 'i' => []]); ?>
                             </p>
                         <?php endif; ?>

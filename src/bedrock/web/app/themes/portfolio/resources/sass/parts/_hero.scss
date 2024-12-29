@@ -9,6 +9,10 @@
   height: 90svh;
   color: white;
 
+  &--with-bg {
+    background-color: $color-grey-500;
+  }
+
   &__canvas {
     position: absolute;
     width: 100%;
@@ -24,6 +28,9 @@
   .text {
     font-size: $font-size-8;
     color: white;
-    margin-bottom: 3rem;
+  }
+
+  .btn {
+    margin-top: 3rem;
   }
 }

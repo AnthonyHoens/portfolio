@@ -159,6 +159,13 @@ p {
   font-size: clamp(0.9375rem, 0.8693rem + 0.3409vw, 1.125rem);
 }
 
+.leading {
+  font-family: "Inter", sans-serif;
+  font-size: clamp(0.9375rem, 0.8693rem + 0.3409vw, 1.125rem);
+  color: rgba(255, 255, 255, 0.7);
+  margin-bottom: 1em;
+}
+
 .btn {
   display: inline-block;
   font-family: "Inter", sans-serif;
@@ -725,6 +732,9 @@ body {
   height: 90svh;
   color: white;
 }
+.hero--with-bg {
+  background-color: #272727;
+}
 .hero__canvas {
   position: absolute;
   width: 100%;
@@ -739,7 +749,9 @@ body {
 .hero .text {
   font-size: clamp(1.0547rem, 0.9473rem + 0.5369vw, 1.35rem);
   color: white;
-  margin-bottom: 3rem;
+}
+.hero .btn {
+  margin-top: 3rem;
 }
 
 .footer {
@@ -966,8 +978,15 @@ body {
 .project__list .project:nth-child(even) .project__img_container {
   order: 2;
 }
+.project__list .project .title {
+  margin-bottom: 0.1em;
+}
+.project__list .project .text {
+  font-size: clamp(0.8333rem, 0.7955rem + 0.1894vw, 0.9375rem);
+  color: rgba(255, 255, 255, 0.7);
+}
 .project__list .project:nth-child(odd) {
-  background-color: #7D7D7D;
+  background-color: rgba(39, 39, 39, 0.8);
 }
 .project__list .project .container {
   display: flex;
@@ -1257,6 +1276,7 @@ body {
 }
 .about .angle {
   --spacing: -1rem;
+  border-color: #1B8284;
 }
 .about__text_container {
   display: flex;
@@ -1388,26 +1408,26 @@ body {
 .angle__top_left {
   top: var(--spacing);
   left: var(--spacing);
-  border-top: 2px solid #1B8284;
-  border-left: 2px solid #1B8284;
+  border-top: 2px solid #7D7D7D;
+  border-left: 2px solid #7D7D7D;
 }
 .angle__top_right {
   top: var(--spacing);
   right: var(--spacing);
-  border-top: 2px solid #1B8284;
-  border-right: 2px solid #1B8284;
+  border-top: 2px solid #7D7D7D;
+  border-right: 2px solid #7D7D7D;
 }
 .angle__bottom_left {
   bottom: var(--spacing);
   left: var(--spacing);
-  border-bottom: 2px solid #1B8284;
-  border-left: 2px solid #1B8284;
+  border-bottom: 2px solid #7D7D7D;
+  border-left: 2px solid #7D7D7D;
 }
 .angle__bottom_right {
   bottom: var(--spacing);
   right: var(--spacing);
-  border-bottom: 2px solid #1B8284;
-  border-right: 2px solid #1B8284;
+  border-bottom: 2px solid #7D7D7D;
+  border-right: 2px solid #7D7D7D;
 }
 
 .philosophy {
@@ -1433,6 +1453,22 @@ body {
   font-size: clamp(0.9375rem, 0.8693rem + 0.3409vw, 1.125rem);
   font-weight: 500;
   margin-top: 1rem;
+}
+
+.tags {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.tag {
+  display: inline-block;
+  font-size: clamp(0.8333rem, 0.7955rem + 0.1894vw, 0.9375rem);
+  color: #fff;
+  background-color: #7D7D7D;
+  border-radius: 9999px;
+  padding: 0.3em 1em;
+  margin-bottom: 2rem;
 }
 
 .text-center {

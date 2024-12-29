@@ -1,0 +1,15 @@
+.tags {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.tag {
+  display: inline-block;
+  font-size: $font-size--1;
+  color: $color-light;
+  background-color: $color-grey-400;
+  border-radius: $border-full;
+  padding: .3em 1em;
+  margin-bottom: 2rem;
+}
