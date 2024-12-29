@@ -57,26 +57,28 @@
         <?php endif ?>
     </section>
 
-    <div class="project__preview">
-        <?php if(!empty(get_field('design_img_computer'))): ?>
-            <div>
-                <img class="macbook" src="<?= esc_url(dw_asset('/images/macbook.png')) ?>"
-                     alt="<?= esc_attr__('Project image inside macbook', THEME_TEXT_DOMAIN) ?>" />
-                <figure class="project__img--desktop container--img">
-                    <img <?= dw_the_img_attributes(get_field('design_img_computer'), ['thumbnail','medium', 'large']) ?> />
-                </figure>
-            </div>
-        <?php endif; ?>
-        <?php if(!empty(get_field('design_img_phone'))): ?>
-            <div class="iphone--container">
-                <img class="iphone" src="<?= esc_url(dw_asset('/images/iphone.png')) ?>"
-                     alt="<?= esc_attr__('Project image inside iphone', THEME_TEXT_DOMAIN) ?>" />
-                <figure class="project__img--iphone container--img">
-                    <img <?= dw_the_img_attributes(get_field('design_img_phone'), ['thumbnail','medium', 'large']) ?> />
-                </figure>
-            </div>
-        <?php endif; ?>
-    </div>
+    <?php if(!empty(get_field('design_img_computer')) || !empty(get_field('design_img_phone'))): ?>
+        <div class="project__preview">
+            <?php if(!empty(get_field('design_img_computer'))): ?>
+                <div>
+                    <img class="macbook" src="<?= esc_url(dw_asset('/images/macbook.png')) ?>"
+                         alt="<?= esc_attr__('Project image inside macbook', THEME_TEXT_DOMAIN) ?>" />
+                    <figure class="project__img--desktop container--img">
+                        <img <?= dw_the_img_attributes(get_field('design_img_computer'), ['thumbnail','medium', 'large']) ?> />
+                    </figure>
+                </div>
+            <?php endif; ?>
+            <?php if(!empty(get_field('design_img_phone'))): ?>
+                <div class="iphone--container">
+                    <img class="iphone" src="<?= esc_url(dw_asset('/images/iphone.png')) ?>"
+                         alt="<?= esc_attr__('Project image inside iphone', THEME_TEXT_DOMAIN) ?>" />
+                    <figure class="project__img--iphone container--img">
+                        <img <?= dw_the_img_attributes(get_field('design_img_phone'), ['thumbnail','medium', 'large']) ?> />
+                    </figure>
+                </div>
+            <?php endif; ?>
+        </div>
+    <?php endif; ?>
 
     <?php
     $projects = new WP_Query([
