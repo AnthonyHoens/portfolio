@@ -383,7 +383,7 @@ add_action('acf/include_fields', function () {
                 array(
                     'param' => 'page',
                     'operator' => '==',
-                    'value' => '8',
+                    'value' => '6',
                 ),
             ),
         ),
