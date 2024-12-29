@@ -77,7 +77,7 @@
             'post_type' => 'project',
             'posts_per_page' => 3,
             'orderBy' => 'date',
-            'order' => 'asc',
+            'order' => 'desc',
         ]);
         ?>
 

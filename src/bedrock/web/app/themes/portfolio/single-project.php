@@ -86,7 +86,7 @@
         'post_by_page' => 6,
         'post__not_in' => [get_the_ID()],
         'orderBy' => 'date',
-        'order' => 'asc',
+        'order' => 'desc',
     ]);
     ?>
     <section class="projects-list--slider">

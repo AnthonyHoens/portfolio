@@ -61,7 +61,7 @@
             'post_type' => 'project',
             'post_by_page' => 6,
             'orderBy' => 'date',
-            'order' => 'asc',
+            'order' => 'desc',
         ]);
     ?>
     <section class="projects-list--slider">
