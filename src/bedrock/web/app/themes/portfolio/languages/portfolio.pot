@@ -113,3 +113,9 @@ msgstr ""
 
 msgid "New project owner"
 msgstr ""
+
+msgid "It seems you're lost!"
+msgstr ""
+
+msgid "Return Homepage"
+msgstr ""

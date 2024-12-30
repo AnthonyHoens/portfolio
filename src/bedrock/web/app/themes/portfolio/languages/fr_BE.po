@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2024-12-29 21:46+0100\n"
+"PO-Revision-Date: 2024-12-30 14:28+0100\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: fr_BE\n"
@@ -129,3 +129,9 @@ msgstr "Modifier un auteur de projet"
 
 msgid "New project owner"
 msgstr "Nouveau auteur de projet"
+
+msgid "It seems you're lost!"
+msgstr "Vous semblez perdu!"
+
+msgid "Return Homepage"
+msgstr "Revenir à la page d'accueil"
